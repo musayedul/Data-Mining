@@ -1,0 +1,1031 @@
+caption_sentence,cleaned_tokens
+,
+so let's actually just accuracy is 81.,"['let', 'actually', 'accuracy']"
+so let's actually just accuracy is 81.,"['let', 'actually', 'accuracy']"
+"so let's actually just
+make this five make this five make this five
+all right so you know again very similar all right so you know again very similar all right so you know again very similar
+numbers we have 82 percent accuracy numbers we have 82 percent accuracy numbers we have 82 percent accuracy
+which is pretty decent for a model which is pretty decent for a model which is pretty decent for a model
+that's that's that's
+relatively simple relatively simple relatively simple
+the next type of model that we're going the next type of model that we're going the next type of model that we're going
+to talk about is something known as to talk about is something known as to talk about is something known as
+naive bayes naive bayes naive bayes
+now in order to understand the concepts now in order to understand the concepts now in order to understand the concepts
+behind naive bayes we have to be able to behind naive bayes we have to be able to behind naive bayes we have to be able to
+understand conditional probability and understand conditional probability and understand conditional probability and
+bayes rule bayes rule bayes rule
+so so so
+let's say i have some sort of data set let's say i have some sort of data set let's say i have some sort of data set
+that's shown in this table right here that's shown in this table right here that's shown in this table right here
+people who have covid are over here in people who have covid are over here in people who have covid are over here in
+this red row and people who do not have this red row and people who do not have this red row and people who do not have
+covet are down here in this green row covet are down here in this green row covet are down here in this green row
+now what about the cova test well people now what about the cova test well people now what about the cova test well people
+who have tested positive who have tested positive who have tested positive
+are over here in this column are over here in this column are over here in this column
+and people who have tested negative are and people who have tested negative are and people who have tested negative are
+over here in this over here in this over here in this
+column column column
+okay okay okay
+yeah so basically our categories are yeah so basically our categories are yeah so basically our categories are
+people who have coven and test positive people who have coven and test positive people who have coven and test positive
+people who don't have covid but test people who don't have covid but test people who don't have covid but test
+positive so a false false positive positive so a false false positive positive so a false false positive
+people who have covet and test negative people who have covet and test negative people who have covet and test negative
+which is a false negative which is a false negative which is a false negative
+and people who don't have covid and test and people who don't have covid and test and people who don't have covid and test
+negative which negative which negative which
+good means you don't have coven good means you don't have coven good means you don't have coven
+okay so let's make this slightly more okay so let's make this slightly more okay so let's make this slightly more
+legible and here in the margins i've written and here in the margins i've written
+down the sums down the sums down the sums
+of of of
+whatever it's referring to so this here whatever it's referring to so this here whatever it's referring to so this here
+is the sum of this entire row is the sum of this entire row is the sum of this entire row
+and this here might be the sum of this and this here might be the sum of this and this here might be the sum of this
+column over here column over here column over here
+okay okay okay
+so the first question that i have is so the first question that i have is so the first question that i have is
+what is the probability of having covid what is the probability of having covid what is the probability of having covid
+given that you have a positive test given that you have a positive test given that you have a positive test
+and in probability we write that out and in probability we write that out and in probability we write that out
+like this so the probability like this so the probability like this so the probability
+of covid given so this line that vertical line given so this line that vertical line
+means means means
+given that you know some condition given that you know some condition given that you know some condition
+so given a positive test so given a positive test so given a positive test
+okay okay okay
+so so so
+what is the probability of having covid what is the probability of having covid what is the probability of having covid
+given a positive test given a positive test given a positive test
+so what this is asking is saying okay so what this is asking is saying okay so what this is asking is saying okay
+let's go into let's go into let's go into
+this condition so the condition of this condition so the condition of this condition so the condition of
+having a positive test that is having a positive test that is having a positive test that is
+this slice of the data right that means this slice of the data right that means this slice of the data right that means
+if you're in this slice of data you have if you're in this slice of data you have if you're in this slice of data you have
+a positive test so given that we have a a positive test so given that we have a a positive test so given that we have a
+positive test given in this condition in positive test given in this condition in positive test given in this condition in
+this circumstance we have a positive this circumstance we have a positive this circumstance we have a positive
+test test test
+so what's the probability that we have so what's the probability that we have so what's the probability that we have
+covid covid covid
+well well well
+if we're just using this data the number if we're just using this data the number if we're just using this data the number
+of people that have covid is 531.","['let', 'actually', 'make', 'five', 'make', 'five', 'make', 'five', 'right', 'know', 'similar', 'right', 'know', 'similar', 'right', 'know', 'similar', 'number', 'percent', 'accuracy', 'number', 'percent', 'accuracy', 'number', 'percent', 'accuracy', 'pretty', 'decent', 'model', 'pretty', 'decent', 'model', 'pretty', 'decent', 'model', 'thats', 'thats', 'thats', 'relatively', 'simple', 'relatively', 'simple', 'relatively', 'simple', 'next', 'type', 'model', 'going', 'next', 'type', 'model', 'going', 'next', 'type', 'model', 'going', 'talk', 'something', 'known', 'talk', 'something', 'known', 'talk', 'something', 'known', 'naive', 'bayes', 'naive', 'bayes', 'naive', 'bayes', 'order', 'understand', 'concept', 'order', 'understand', 'concept', 'order', 'understand', 'concept', 'behind', 'naive', 'bayes', 'able', 'behind', 'naive', 'bayes', 'able', 'behind', 'naive', 'bayes', 'able', 'understand', 'conditional', 'probability', 'understand', 'conditional', 'probability', 'understand', 'conditional', 'probability', 'bayes', 'rule', 'bayes', 'rule', 'bayes', 'rule', 'let', 'say', 'sort', 'data', 'set', 'let', 'say', 'sort', 'data', 'set', 'let', 'say', 'sort', 'data', 'set', 'thats', 'shown', 'table', 'right', 'thats', 'shown', 'table', 'right', 'thats', 'shown', 'table', 'right', 'people', 'covid', 'people', 'covid', 'people', 'covid', 'red', 'row', 'people', 'red', 'row', 'people', 'red', 'row', 'people', 'covet', 'green', 'row', 'covet', 'green', 'row', 'covet', 'green', 'row', 'cova', 'test', 'well', 'people', 'cova', 'test', 'well', 'people', 'cova', 'test', 'well', 'people', 'tested', 'positive', 'tested', 'positive', 'tested', 'positive', 'column', 'column', 'column', 'people', 'tested', 'negative', 'people', 'tested', 'negative', 'people', 'tested', 'negative', 'column', 'column', 'column', 'okay', 'okay', 'okay', 'yeah', 'basically', 'category', 'yeah', 'basically', 'category', 'yeah', 'basically', 'category', 'people', 'coven', 'test', 'positive', 'people', 'coven', 'test', 'positive', 'people', 'coven', 'test', 'positive', 'people', 'dont', 'covid', 'test', 'people', 'dont', 'covid', 'test', 'people', 'dont', 'covid', 'test', 'positive', 'false', 'false', 'positive', 'positive', 'false', 'false', 'positive', 'positive', 'false', 'false', 'positive', 'people', 'covet', 'test', 'negative', 'people', 'covet', 'test', 'negative', 'people', 'covet', 'test', 'negative', 'false', 'negative', 'false', 'negative', 'false', 'negative', 'people', 'dont', 'covid', 'test', 'people', 'dont', 'covid', 'test', 'people', 'dont', 'covid', 'test', 'negative', 'negative', 'negative', 'good', 'mean', 'dont', 'coven', 'good', 'mean', 'dont', 'coven', 'good', 'mean', 'dont', 'coven', 'okay', 'let', 'make', 'slightly', 'okay', 'let', 'make', 'slightly', 'okay', 'let', 'make', 'slightly', 'legible', 'margin', 'ive', 'written', 'margin', 'ive', 'written', 'sum', 'sum', 'sum', 'whatever', 'referring', 'whatever', 'referring', 'whatever', 'referring', 'sum', 'entire', 'row', 'sum', 'entire', 'row', 'sum', 'entire', 'row', 'might', 'sum', 'might', 'sum', 'might', 'sum', 'column', 'column', 'column', 'okay', 'okay', 'okay', 'first', 'question', 'first', 'question', 'first', 'question', 'probability', 'covid', 'probability', 'covid', 'probability', 'covid', 'given', 'positive', 'test', 'given', 'positive', 'test', 'given', 'positive', 'test', 'probability', 'write', 'probability', 'write', 'probability', 'write', 'like', 'probability', 'like', 'probability', 'like', 'probability', 'covid', 'given', 'line', 'vertical', 'line', 'given', 'line', 'vertical', 'line', 'mean', 'mean', 'mean', 'given', 'know', 'condition', 'given', 'know', 'condition', 'given', 'know', 'condition', 'given', 'positive', 'test', 'given', 'positive', 'test', 'given', 'positive', 'test', 'okay', 'okay', 'okay', 'probability', 'covid', 'probability', 'covid', 'probability', 'covid', 'given', 'positive', 'test', 'given', 'positive', 'test', 'given', 'positive', 'test', 'asking', 'saying', 'okay', 'asking', 'saying', 'okay', 'asking', 'saying', 'okay', 'let', 'let', 'let', 'condition', 'condition', 'condition', 'condition', 'condition', 'condition', 'positive', 'test', 'positive', 'test', 'positive', 'test', 'slice', 'data', 'right', 'mean', 'slice', 'data', 'right', 'mean', 'slice', 'data', 'right', 'mean', 'youre', 'slice', 'data', 'youre', 'slice', 'data', 'youre', 'slice', 'data', 'positive', 'test', 'given', 'positive', 'test', 'given', 'positive', 'test', 'given', 'positive', 'test', 'given', 'condition', 'positive', 'test', 'given', 'condition', 'positive', 'test', 'given', 'condition', 'circumstance', 'positive', 'circumstance', 'positive', 'circumstance', 'positive', 'test', 'test', 'test', 'whats', 'probability', 'whats', 'probability', 'whats', 'probability', 'covid', 'covid', 'covid', 'well', 'well', 'well', 'using', 'data', 'number', 'using', 'data', 'number', 'using', 'data', 'number', 'people', 'covid']"
+of people that have covid is 531.,"['people', 'covid']"
+"of people that have covid is 531.
+so i'm going to say that there's 531 so i'm going to say that there's 531 so i'm going to say that there's 531
+people that have copied people that have copied people that have copied
+and then now we divide that by the total and then now we divide that by the total and then now we divide that by the total
+number of people that have a positive number of people that have a positive number of people that have a positive
+test which is 551 okay so that's the probability and okay so that's the probability and
+doing a quick doing a quick doing a quick
+division division division
+we get that this is equal to around to around
+96.4 percent 96.4 percent 96.4 percent
+so according to this data set which is so according to this data set which is so according to this data set which is
+data that i made up off the top of my data that i made up off the top of my data that i made up off the top of my
+head so it's not actually real cova data head so it's not actually real cova data head so it's not actually real cova data
+but according to this data but according to this data but according to this data
+uh the probability of encoded given that uh the probability of encoded given that uh the probability of encoded given that
+you tested positive you tested positive you tested positive
+is is is
+96.4 all right now with that let's talk about all right now with that let's talk about
+bayes rule bayes rule bayes rule
+which is this section here which is this section here which is this section here
+let's ignore this bottom part for now let's ignore this bottom part for now let's ignore this bottom part for now
+so so so
+base rule is asking okay what is the base rule is asking okay what is the base rule is asking okay what is the
+probability of some event a happening probability of some event a happening probability of some event a happening
+given that b happen so this given that b happen so this given that b happen so this
+we already know has happened this is our we already know has happened this is our we already know has happened this is our
+condition right well what if we don't have data for that well what if we don't have data for that
+right like what if we don't know what right like what if we don't know what right like what if we don't know what
+the probability of a given b is the probability of a given b is the probability of a given b is
+well bayes rule is saying okay well you well bayes rule is saying okay well you well bayes rule is saying okay well you
+can actually go and calculate it as long can actually go and calculate it as long can actually go and calculate it as long
+as you have the probability of b given a as you have the probability of b given a as you have the probability of b given a
+the probability of a and the probability the probability of a and the probability the probability of a and the probability
+of b of b of b
+okay and this is just a mathematical okay and this is just a mathematical okay and this is just a mathematical
+formula for that formula for that formula for that
+all right so here we have bayes rule all right so here we have bayes rule all right so here we have bayes rule
+and let's actually see bayes rule in and let's actually see bayes rule in and let's actually see bayes rule in
+action let's use it on an example action let's use it on an example action let's use it on an example
+so here let's say that we have some so here let's say that we have some so here let's say that we have some
+um disease statistics okay um disease statistics okay um disease statistics okay
+so knock over different disease so knock over different disease so knock over different disease
+and we know that the probability of and we know that the probability of and we know that the probability of
+obtaining a false positive is 0.05 obtaining a false positive is 0.05 obtaining a false positive is 0.05
+probability of obtaining a false probability of obtaining a false probability of obtaining a false
+negative is 0.01 and the probability of negative is 0.01 and the probability of negative is 0.01 and the probability of
+the disease is 0.1 the disease is 0.1 the disease is 0.1
+okay what is the probability of the okay what is the probability of the okay what is the probability of the
+disease given that disease given that disease given that
+we got a positive test we got a positive test we got a positive test
+how do we even go about solving this how do we even go about solving this how do we even go about solving this
+so what what do i mean by false positive so what what do i mean by false positive so what what do i mean by false positive
+what's a different way to rewrite that what's a different way to rewrite that what's a different way to rewrite that
+a false positive is when you test a false positive is when you test a false positive is when you test
+positive but you don't actually have the positive but you don't actually have the positive but you don't actually have the
+disease so this here is a probability disease so this here is a probability disease so this here is a probability
+that you'd have a positive test given that you'd have a positive test given that you'd have a positive test given
+no disease no disease no disease
+right right right
+and similarly for the false negative and similarly for the false negative and similarly for the false negative
+it's the probability that you test it's the probability that you test it's the probability that you test
+negative given that you actually have negative given that you actually have negative given that you actually have
+the disease so if i put that into a the disease so if i put that into a the disease so if i put that into a
+chart chart chart
+for example and this might be my positive and and this might be my positive and
+negative tests and this might be negative tests and this might be negative tests and this might be
+my diseases my diseases my diseases
+disease and no disease disease and no disease disease and no disease
+well the probability that i test well the probability that i test well the probability that i test
+positive but actually have no disease positive but actually have no disease positive but actually have no disease
+okay that's 0.05 over here okay that's 0.05 over here okay that's 0.05 over here
+and then the false negative is up here and then the false negative is up here and then the false negative is up here
+for 0.01 so i'm testing negative but i for 0.01 so i'm testing negative but i for 0.01 so i'm testing negative but i
+don't actually have the disease this so the probability that you test this so the probability that you test
+positive and you don't have the disease positive and you don't have the disease positive and you don't have the disease
+plus the probability that you test plus the probability that you test plus the probability that you test
+negative given that you don't have the negative given that you don't have the negative given that you don't have the
+disease disease disease
+that should sum up to one that should sum up to one that should sum up to one
+okay because if you don't have the okay because if you don't have the okay because if you don't have the
+disease then you should have some disease then you should have some disease then you should have some
+probability that you're testing positive probability that you're testing positive probability that you're testing positive
+and some probably that you're testing and some probably that you're testing and some probably that you're testing
+negative but that probability negative but that probability negative but that probability
+in total should be one in total should be one in total should be one
+so that means that so that means that so that means that
+the probability of negative and no the probability of negative and no the probability of negative and no
+disease this should be the reciprocal disease this should be the reciprocal disease this should be the reciprocal
+this would be the opposite so it should this would be the opposite so it should this would be the opposite so it should
+be be be
+0.95 because it's 1 minus whatever this 0.95 because it's 1 minus whatever this 0.95 because it's 1 minus whatever this
+probability is probability is probability is
+and then similarly and then similarly and then similarly
+oops up here this should be 0.99 because up here this should be 0.99 because
+the probability that we the probability that we the probability that we
+you know test negative and have the you know test negative and have the you know test negative and have the
+disease plus the probability that we disease plus the probability that we disease plus the probability that we
+test positive and have the disease test positive and have the disease test positive and have the disease
+should equal one should equal one should equal one
+so this is our probability chart and now so this is our probability chart and now so this is our probability chart and now
+this probability of disease this probability of disease this probability of disease
+being point zero point one just means i being point zero point one just means i being point zero point one just means i
+have a ten percent probability of have a ten percent probability of have a ten percent probability of
+actually of having the disease right actually of having the disease right actually of having the disease right
+like like like
+in the general population the in the general population the in the general population the
+probability that i have the disease is probability that i have the disease is probability that i have the disease is
+0.1 0.1 0.1
+okay so what is the probability that i okay so what is the probability that i okay so what is the probability that i
+have the disease given that i got a have the disease given that i got a have the disease given that i got a
+positive i got a positive positive i got a positive positive i got a positive
+test well remember that we can write test well remember that we can write test well remember that we can write
+this out in terms of bayes rule right so this out in terms of bayes rule right so this out in terms of bayes rule right so
+if i use this rule up here if i use this rule up here if i use this rule up here
+this is the probability of a positive this is the probability of a positive this is the probability of a positive
+test given that i have the disease test given that i have the disease test given that i have the disease
+times the probability times the probability times the probability
+of the disease of the disease of the disease
+divided by the probability of the divided by the probability of the divided by the probability of the
+evidence which is my positive test evidence which is my positive test evidence which is my positive test
+all right now let's plug in some numbers all right now let's plug in some numbers all right now let's plug in some numbers
+for that the probability of having a for that the probability of having a for that the probability of having a
+positive test given that i have disease positive test given that i have disease positive test given that i have disease
+is is is
+0.99 0.99 0.99
+and then the probability that i have the and then the probability that i have the and then the probability that i have the
+disease disease disease
+is this value over here is this value over here is this value over here
+0.1 okay okay
+and then and then and then
+the probability that i have a positive the probability that i have a positive the probability that i have a positive
+test at all test at all test at all
+should be okay what is the probability should be okay what is the probability should be okay what is the probability
+that i have a positive test given that i that i have a positive test given that i that i have a positive test given that i
+actually have the disease actually have the disease actually have the disease
+and then having having the disease and then having having the disease and then having having the disease
+and then the other case and then the other case and then the other case
+where the probability of me having a where the probability of me having a where the probability of me having a
+negative test given or sorry positive negative test given or sorry positive negative test given or sorry positive
+test giving no disease times the probability of not actually times the probability of not actually
+having a disease having a disease having a disease
+okay so i can expand that okay so i can expand that okay so i can expand that
+probability of having positive tests out probability of having positive tests out probability of having positive tests out
+into these two different cases into these two different cases into these two different cases
+i have a disease and then i don't i have a disease and then i don't i have a disease and then i don't
+and then and then and then
+what's the probability of having what's the probability of having what's the probability of having
+positive tests in either one of those positive tests in either one of those positive tests in either one of those
+cases cases cases
+so that expression would become so that expression would become so that expression would become
+0.99 0.99 0.99
+times 0.1 times 0.1 times 0.1
+plus plus plus
+0.05 so that's the probability that i'm 0.05 so that's the probability that i'm 0.05 so that's the probability that i'm
+testing positive but don't have the testing positive but don't have the testing positive but don't have the
+disease disease disease
+and the times the probability that i and the times the probability that i and the times the probability that i
+don't actually have the disease so don't actually have the disease so don't actually have the disease so
+that's 1 minus 0.1 the probability that that's 1 minus 0.1 the probability that that's 1 minus 0.1 the probability that
+the population doesn't have the disease the population doesn't have the disease the population doesn't have the disease
+is 90 is 90 is 90
+so so so
+0.9 and let's do that multiplication 0.9 and let's do that multiplication 0.9 and let's do that multiplication
+and i get an answer and i get an answer and i get an answer
+of 0.6875 or or
+68.75 percent all right so we can actually expand that all right so we can actually expand that
+we can expand bayes rule we can expand bayes rule we can expand bayes rule
+and apply it to classification and apply it to classification and apply it to classification
+and this is what we call naive bayes and this is what we call naive bayes and this is what we call naive bayes
+so first a little terminology so the so first a little terminology so the so first a little terminology so the
+posterior posterior posterior
+is this over here because it's asking is this over here because it's asking is this over here because it's asking
+hey what is the probability hey what is the probability hey what is the probability
+of some class ck so by ck i just mean of some class ck so by ck i just mean of some class ck so by ck i just mean
+you know the different categories so c you know the different categories so c you know the different categories so c
+for category or class or whatever so for category or class or whatever so for category or class or whatever so
+category one might be cats category two category one might be cats category two category one might be cats category two
+dogs category three lizards dogs category three lizards dogs category three lizards
+all the way we have k categories k is all the way we have k categories k is all the way we have k categories k is
+just some number just some number just some number
+okay okay okay
+so so so
+what is the probability of having what is the probability of having what is the probability of having
+of of of
+this specific sample x so this is our this specific sample x so this is our this specific sample x so this is our
+feature factor feature factor feature factor
+of this one sample of this one sample of this one sample
+what is the probability of x fitting what is the probability of x fitting what is the probability of x fitting
+into category one two three four into category one two three four into category one two three four
+whatever right so that that's what this whatever right so that that's what this whatever right so that that's what this
+is asking what is the probability that is asking what is the probability that is asking what is the probability that
+you know it's actually from this class you know it's actually from this class you know it's actually from this class
+given all this evidence that we see the given all this evidence that we see the given all this evidence that we see the
+x's so so
+the likelihood the likelihood the likelihood
+is this quantity over here it's saying is this quantity over here it's saying is this quantity over here it's saying
+okay okay okay
+well given that you know assume assume well given that you know assume assume well given that you know assume assume
+we are we are we are
+assumed that this class is class ck okay assumed that this class is class ck okay assumed that this class is class ck okay
+assume that this is a category assume that this is a category assume that this is a category
+well what is the likelihood of actually well what is the likelihood of actually well what is the likelihood of actually
+seeing x seeing x seeing x
+all these different features from that all these different features from that all these different features from that
+category and then this here is the prior so like and then this here is the prior so like
+in the entire population of things in the entire population of things in the entire population of things
+what what is what are the probabilities what what is what are the probabilities what what is what are the probabilities
+what is the probability of this class in what is the probability of this class in what is the probability of this class in
+general like if i have general like if i have general like if i have
+you know in my entire data set what is you know in my entire data set what is you know in my entire data set what is
+the percentage what is the chance that the percentage what is the chance that the percentage what is the chance that
+this image is a cat how many cats do i this image is a cat how many cats do i this image is a cat how many cats do i
+have have have
+right right right
+and then this down here is called the and then this down here is called the and then this down here is called the
+evidence because evidence because evidence because
+what we're trying to do what we're trying to do what we're trying to do
+is we're changing our prior we're is we're changing our prior we're is we're changing our prior we're
+creating this new posterior probability creating this new posterior probability creating this new posterior probability
+built upon the prior by using some sort built upon the prior by using some sort built upon the prior by using some sort
+of evidence right and that evidence is of evidence right and that evidence is of evidence right and that evidence is
+the probability of x the probability of x the probability of x
+so that's some vocab so that's some vocab so that's some vocab
+and and and
+this here is a rule for naive bayes is a rule for naive bayes
+whoa okay let's digest whoa okay let's digest whoa okay let's digest
+that that that
+a little bit okay a little bit okay a little bit okay
+so what is let me use a different color so what is let me use a different color so what is let me use a different color
+what is this what is this what is this
+side of the equation asking side of the equation asking side of the equation asking
+it's asking it's asking it's asking
+what is the probability that we are in what is the probability that we are in what is the probability that we are in
+sum class k ck sum class k ck sum class k ck
+given that you know this is my first given that you know this is my first given that you know this is my first
+input this is my second input this is input this is my second input this is input this is my second input this is
+you know my third fourth this is my nth you know my third fourth this is my nth you know my third fourth this is my nth
+input input input
+so let's say that our classification is so let's say that our classification is so let's say that our classification is
+do we play soccer today or not do we play soccer today or not do we play soccer today or not
+okay and let's say our x's are okay is okay and let's say our x's are okay is okay and let's say our x's are okay is
+it how much wind is there how much it how much wind is there how much it how much wind is there how much
+uh rain is there and what day of the uh rain is there and what day of the uh rain is there and what day of the
+week is it so let's say that it's week is it so let's say that it's week is it so let's say that it's
+raining it's not windy but it's raining it's not windy but it's raining it's not windy but it's
+wednesday do we play soccer do we not wednesday do we play soccer do we not wednesday do we play soccer do we not
+so let's use bayes rule on this so this so let's use bayes rule on this so this so let's use bayes rule on this so this
+here is equal to the probability of x1 is equal to the probability of x1
+x2 all these joint probabilities given x2 all these joint probabilities given x2 all these joint probabilities given
+class k class k class k
+times the probability of that class times the probability of that class times the probability of that class
+all over the probability of this all over the probability of this all over the probability of this
+evidence okay okay
+so what is this fancy symbol over here so what is this fancy symbol over here so what is this fancy symbol over here
+this means proportional this means proportional this means proportional
+to to to
+so how our equal sign means it's equal so how our equal sign means it's equal so how our equal sign means it's equal
+to this like little squiggly sign means to this like little squiggly sign means to this like little squiggly sign means
+that this is proportional to that this is proportional to that this is proportional to
+okay okay okay
+and this denominator over here and this denominator over here and this denominator over here
+you might notice that it has no impact you might notice that it has no impact you might notice that it has no impact
+on the class like this that number on the class like this that number on the class like this that number
+doesn't depend on the class right so doesn't depend on the class right so doesn't depend on the class right so
+this is going to be constant for all of this is going to be constant for all of this is going to be constant for all of
+our different classes our different classes our different classes
+so what i'm going to do is make things so what i'm going to do is make things so what i'm going to do is make things
+simpler so i'm just going to say that simpler so i'm just going to say that simpler so i'm just going to say that
+this probability this probability this probability
+x1 x2 all the way to xn x1 x2 all the way to xn x1 x2 all the way to xn
+this is going to be proportional to the this is going to be proportional to the this is going to be proportional to the
+numerator i don't care about the numerator i don't care about the numerator i don't care about the
+denominator because it's the same for denominator because it's the same for denominator because it's the same for
+every single class every single class every single class
+so this is proportional to x1 x2 so this is proportional to x1 x2 so this is proportional to x1 x2
+xn xn xn
+given given given
+class k times the probability of that class k times the probability of that class k times the probability of that
+class class class
+okay okay okay
+all right all right all right
+so in naive bayes the so in naive bayes the so in naive bayes the
+point of it being naive point of it being naive point of it being naive
+is that we're actually is that we're actually is that we're actually
+this joint probability we're just this joint probability we're just this joint probability we're just
+assuming that all of these different assuming that all of these different assuming that all of these different
+things things things
+are all independent so in my soccer are all independent so in my soccer are all independent so in my soccer
+example example example
+you know you know you know
+the probability that we're playing the probability that we're playing the probability that we're playing
+soccer soccer soccer
+um um um
+or the probability that you know it's or the probability that you know it's or the probability that you know it's
+windy and it's rainy and and it's windy and it's rainy and and it's windy and it's rainy and and it's
+wednesday all these things are wednesday all these things are wednesday all these things are
+independent we're assuming that they're independent we're assuming that they're independent we're assuming that they're
+independent independent independent
+so that means that i can actually write so that means that i can actually write so that means that i can actually write
+this part of the equation here this part of the equation here this part of the equation here
+as as as
+this so each term in here this so each term in here this so each term in here
+i can just multiply i can just multiply i can just multiply
+all them together so the probability of all them together so the probability of all them together so the probability of
+the first the first the first
+feature given that it's class k feature given that it's class k feature given that it's class k
+times the probability times the probability times the probability
+of the second feature given that's of the second feature given that's of the second feature given that's
+probably like class k all the way up probably like class k all the way up probably like class k all the way up
+until until until
+you know the nth you know the nth you know the nth
+feature feature feature
+of of of
+given that it's class k given that it's class k given that it's class k
+so this expands to all of this so this expands to all of this so this expands to all of this
+all right which means that this here is all right which means that this here is all right which means that this here is
+now proportional now proportional now proportional
+to the thing that we just expanded to the thing that we just expanded to the thing that we just expanded
+times this times this times this
+so i'm going to write so i'm going to write so i'm going to write
+that out so the probability that out so the probability that out so the probability
+of that class of that class of that class
+and i'm actually going to use this and i'm actually going to use this and i'm actually going to use this
+symbol so what this means is it's a huge symbol so what this means is it's a huge symbol so what this means is it's a huge
+multiplication it means multiply multiplication it means multiply multiplication it means multiply
+everything everything everything
+to the right of this so this probability to the right of this so this probability to the right of this so this probability
+x x x
+given given given
+some class k some class k some class k
+but do it for all the i so i but do it for all the i so i but do it for all the i so i
+what is i okay we're going to go from what is i okay we're going to go from what is i okay we're going to go from
+the first the first the first
+x i all the way to the end so that means x i all the way to the end so that means x i all the way to the end so that means
+for every single i we're just for every single i we're just for every single i we're just
+multiplying multiplying multiplying
+these probabilities together these probabilities together these probabilities together
+and that's where and that's where and that's where
+this up here comes from this up here comes from this up here comes from
+so so so
+to wrap this up oops this should be a to wrap this up oops this should be a to wrap this up oops this should be a
+line to wrap this up in plain english line to wrap this up in plain english line to wrap this up in plain english
+basically what this is saying is the basically what this is saying is the basically what this is saying is the
+probability that you know we're in some probability that you know we're in some probability that you know we're in some
+category given that we have all these category given that we have all these category given that we have all these
+different features different features different features
+is proportional to the probability of is proportional to the probability of is proportional to the probability of
+that class in general that class in general that class in general
+times the probability of each of those times the probability of each of those times the probability of each of those
+features features features
+given that we're in this one class that given that we're in this one class that given that we're in this one class that
+we're testing we're testing we're testing
+so the probability so the probability so the probability
+of it you know of us playing soccer of it you know of us playing soccer of it you know of us playing soccer
+today given that it's rainy not windy today given that it's rainy not windy today given that it's rainy not windy
+and and and
+um and it's wednesday um and it's wednesday um and it's wednesday
+is proportional to okay well what is is proportional to okay well what is is proportional to okay well what is
+what is the probability that we play what is the probability that we play what is the probability that we play
+soccer anyways soccer anyways soccer anyways
+and then times the probability that it's and then times the probability that it's and then times the probability that it's
+rainy given that we're playing soccer rainy given that we're playing soccer rainy given that we're playing soccer
+times the probability that it's not times the probability that it's not times the probability that it's not
+windy given that we're playing soccer so windy given that we're playing soccer so windy given that we're playing soccer so
+how many times are we playing soccer how many times are we playing soccer how many times are we playing soccer
+when it's windy you know when it's windy you know when it's windy you know
+and then how many times or what's the and then how many times or what's the and then how many times or what's the
+probability that's wednesday given that probability that's wednesday given that probability that's wednesday given that
+we're playing soccer we're playing soccer we're playing soccer
+okay okay okay
+so how do we use this in order to make a so how do we use this in order to make a so how do we use this in order to make a
+classification classification classification
+so that's where this comes in our y hat so that's where this comes in our y hat so that's where this comes in our y hat
+our predicted y our predicted y our predicted y
+is going to be equal to something called is going to be equal to something called is going to be equal to something called
+the arg max the arg max the arg max
+and then this expression over here and then this expression over here and then this expression over here
+because we want to take the arg max well because we want to take the arg max well because we want to take the arg max well
+we want we want we want
+so okay if i so okay if i so okay if i
+write out this write out this write out this
+again this means the probability of again this means the probability of again this means the probability of
+being in some class c k given all of our being in some class c k given all of our being in some class c k given all of our
+evidence well we're going to take the k well we're going to take the k
+that maximizes that maximizes that maximizes
+this expression on the right this expression on the right this expression on the right
+that's what arc max means so if k is in that's what arc max means so if k is in that's what arc max means so if k is in
+zero oops zero oops zero oops
+one through one through one through
+k so this is how many categories there k so this is how many categories there k so this is how many categories there
+are we're going to go through each k are we're going to go through each k are we're going to go through each k
+and we're going to solve and we're going to solve and we're going to solve
+this expression over here and find the k this expression over here and find the k this expression over here and find the k
+that makes that the largest that makes that the largest that makes that the largest
+okay okay okay
+and and and
+remember that instead of writing this we remember that instead of writing this we remember that instead of writing this we
+have now a formula thanks to bayes rule have now a formula thanks to bayes rule have now a formula thanks to bayes rule
+for helping us for helping us for helping us
+approximate that right and something approximate that right and something approximate that right and something
+that maybe we can that maybe we can that maybe we can
+we maybe we have like the evidence for we maybe we have like the evidence for we maybe we have like the evidence for
+that we have the answers for that based that we have the answers for that based that we have the answers for that based
+on our training set so this principle of going through each so this principle of going through each
+of these and finding whatever class of these and finding whatever class of these and finding whatever class
+whatever category maximizes whatever category maximizes whatever category maximizes
+this expression on the right this is this expression on the right this is this expression on the right this is
+something known as m something known as m something known as m
+ap for short ap for short ap for short
+or maximum a a
+posteriori uh pick the hypothesis so pick the k uh pick the hypothesis so pick the k
+that is the most probable so that we that is the most probable so that we that is the most probable so that we
+minimize the probability of minimize the probability of minimize the probability of
+misclassification misclassification misclassification
+all right all right all right
+so that is m ap that is so that is m ap that is so that is m ap that is
+naive bayes naive bayes naive bayes
+back to the notebook so back to the notebook so back to the notebook so
+just like how i imported k-nearest name just like how i imported k-nearest name just like how i imported k-nearest name
+uh k uh k uh k
+neighbors classifier up here for naive neighbors classifier up here for naive neighbors classifier up here for naive
+bayes i can go to sklearn.naive bayes i can go to sklearn.naive bayes i can go to sklearn.naive
+bayes bayes bayes
+and i can import gaussian and i can import gaussian and i can import gaussian
+naive bayes naive bayes naive bayes
+all right all right all right
+and here i'm going to say my naive bayes and here i'm going to say my naive bayes and here i'm going to say my naive bayes
+model is equal this is very similar to model is equal this is very similar to model is equal this is very similar to
+what we had above and i'm just going to and i'm just going to
+say with this model we are going to fit we are going to fit
+x train x train x train
+and y train and y train and y train
+all right just like above so this i might actually have to so this i might actually have to
+so i'm going to set that so i'm going to set that so i'm going to set that
+and uh and uh and uh
+exactly just like above i'm going to exactly just like above i'm going to exactly just like above i'm going to
+make my prediction make my prediction make my prediction
+so here i'm going to instead use my so here i'm going to instead use my so here i'm going to instead use my
+naive bayes model naive bayes model naive bayes model
+and of course i'm going to run and of course i'm going to run and of course i'm going to run
+the classification report again the classification report again the classification report again
+so i'm actually just going to put these so i'm actually just going to put these so i'm actually just going to put these
+in the same cell in the same cell in the same cell
+but here we have the y the new y but here we have the y the new y but here we have the y the new y
+prediction and then y test is still our prediction and then y test is still our prediction and then y test is still our
+original test data set original test data set original test data set
+so if i run this so if i run this so if i run this
+you'll see that you'll see that you'll see that
+okay what's going on here we get worse okay what's going on here we get worse okay what's going on here we get worse
+scores right our precision scores right our precision scores right our precision
+for all of them they look slightly worse for all of them they look slightly worse for all of them they look slightly worse
+and and and
+our um our um our um
+you know for you know for you know for
+our precision our recall our f1 score our precision our recall our f1 score our precision our recall our f1 score
+they look slightly worse for all the they look slightly worse for all the they look slightly worse for all the
+different categories and our total different categories and our total different categories and our total
+accuracy i mean it's still 72 which is accuracy i mean it's still 72 which is accuracy i mean it's still 72 which is
+not too shabby not too shabby not too shabby
+but it's still 72 but it's still 72 but it's still 72
+okay okay okay
+um um um
+which you know is not not that great which you know is not not that great which you know is not not that great
+okay so let's move on to logistic okay so let's move on to logistic okay so let's move on to logistic
+regression regression regression
+here i've drawn a plot i have y so this here i've drawn a plot i have y so this here i've drawn a plot i have y so this
+is my label is my label is my label
+on one axis and then this is maybe one on one axis and then this is maybe one on one axis and then this is maybe one
+of my features so let's just say i only of my features so let's just say i only of my features so let's just say i only
+have one feature in this case have one feature in this case have one feature in this case
+deck zero right deck zero right deck zero right
+well well well
+we see that we see that we see that
+you know i have a few of one class type you know i have a few of one class type you know i have a few of one class type
+down here down here down here
+and we know it's one class type because and we know it's one class type because and we know it's one class type because
+it's zero and then we have our other it's zero and then we have our other it's zero and then we have our other
+class type one up here class type one up here class type one up here
+okay okay okay
+so many of you guys are familiar with so many of you guys are familiar with so many of you guys are familiar with
+regression so let's start there regression so let's start there regression so let's start there
+if i were to draw a regression line if i were to draw a regression line if i were to draw a regression line
+through this through this through this
+it might look something it might look something it might look something
+like like like
+like this right right
+well this doesn't seem to be a very good well this doesn't seem to be a very good well this doesn't seem to be a very good
+model like why would we use this model like why would we use this model like why would we use this
+specific line to predict why specific line to predict why specific line to predict why
+right right right
+it's it's it's it's it's it's
+iffy iffy iffy
+okay okay okay
+um for example we might say um for example we might say um for example we might say
+okay well it seems like you know okay well it seems like you know okay well it seems like you know
+everything from here downwards would be everything from here downwards would be everything from here downwards would be
+one class type in here upwards would be one class type in here upwards would be one class type in here upwards would be
+another class type another class type another class type
+but when you look at this you're just but when you look at this you're just but when you look at this you're just
+you you you you you you
+visually can tell okay like visually can tell okay like visually can tell okay like
+that line doesn't make sense things are that line doesn't make sense things are that line doesn't make sense things are
+not those dots are not along that line not those dots are not along that line not those dots are not along that line
+and the reason is because we are doing and the reason is because we are doing and the reason is because we are doing
+classification not regression classification not regression classification not regression
+okay okay okay
+well first of all let's start here we well first of all let's start here we well first of all let's start here we
+know that this know that this know that this
+model model model
+if we just use this line it equals m x if we just use this line it equals m x if we just use this line it equals m x
+so whatever this let's just say it's x so whatever this let's just say it's x so whatever this let's just say it's x
+plus b which is the y intercept right plus b which is the y intercept right plus b which is the y intercept right
+and m is the slope and m is the slope and m is the slope
+but when we use a linear regression is but when we use a linear regression is but when we use a linear regression is
+it actually y hat it actually y hat it actually y hat
+no it's not right so when we're working no it's not right so when we're working no it's not right so when we're working
+with linear regression what we're with linear regression what we're with linear regression what we're
+actually estimating in our model actually estimating in our model actually estimating in our model
+is a probability what's the probability is a probability what's the probability is a probability what's the probability
+between 0 and 1 that is class 0 or class between 0 and 1 that is class 0 or class between 0 and 1 that is class 0 or class
+1.","['people', 'covid', 'going', 'say', 'there', 'going', 'say', 'there', 'going', 'say', 'there', 'people', 'copied', 'people', 'copied', 'people', 'copied', 'divide', 'total', 'divide', 'total', 'divide', 'total', 'number', 'people', 'positive', 'number', 'people', 'positive', 'number', 'people', 'positive', 'test', 'okay', 'thats', 'probability', 'okay', 'thats', 'probability', 'quick', 'quick', 'quick', 'division', 'division', 'division', 'get', 'equal', 'around', 'around', 'percent', 'percent', 'percent', 'according', 'data', 'set', 'according', 'data', 'set', 'according', 'data', 'set', 'data', 'made', 'top', 'data', 'made', 'top', 'data', 'made', 'top', 'head', 'actually', 'real', 'cova', 'data', 'head', 'actually', 'real', 'cova', 'data', 'head', 'actually', 'real', 'cova', 'data', 'according', 'data', 'according', 'data', 'according', 'data', 'probability', 'encoded', 'given', 'probability', 'encoded', 'given', 'probability', 'encoded', 'given', 'tested', 'positive', 'tested', 'positive', 'tested', 'positive', 'right', 'let', 'talk', 'right', 'let', 'talk', 'bayes', 'rule', 'bayes', 'rule', 'bayes', 'rule', 'section', 'section', 'section', 'let', 'ignore', 'bottom', 'part', 'let', 'ignore', 'bottom', 'part', 'let', 'ignore', 'bottom', 'part', 'base', 'rule', 'asking', 'okay', 'base', 'rule', 'asking', 'okay', 'base', 'rule', 'asking', 'okay', 'probability', 'event', 'happening', 'probability', 'event', 'happening', 'probability', 'event', 'happening', 'given', 'happen', 'given', 'happen', 'given', 'happen', 'already', 'know', 'happened', 'already', 'know', 'happened', 'already', 'know', 'happened', 'condition', 'right', 'well', 'dont', 'data', 'well', 'dont', 'data', 'right', 'like', 'dont', 'know', 'right', 'like', 'dont', 'know', 'right', 'like', 'dont', 'know', 'probability', 'given', 'probability', 'given', 'probability', 'given', 'well', 'bayes', 'rule', 'saying', 'okay', 'well', 'well', 'bayes', 'rule', 'saying', 'okay', 'well', 'well', 'bayes', 'rule', 'saying', 'okay', 'well', 'actually', 'calculate', 'long', 'actually', 'calculate', 'long', 'actually', 'calculate', 'long', 'probability', 'given', 'probability', 'given', 'probability', 'given', 'probability', 'probability', 'probability', 'probability', 'probability', 'probability', 'okay', 'mathematical', 'okay', 'mathematical', 'okay', 'mathematical', 'formula', 'formula', 'formula', 'right', 'bayes', 'rule', 'right', 'bayes', 'rule', 'right', 'bayes', 'rule', 'let', 'actually', 'see', 'bayes', 'rule', 'let', 'actually', 'see', 'bayes', 'rule', 'let', 'actually', 'see', 'bayes', 'rule', 'action', 'let', 'use', 'example', 'action', 'let', 'use', 'example', 'action', 'let', 'use', 'example', 'let', 'say', 'let', 'say', 'let', 'say', 'disease', 'statistic', 'okay', 'disease', 'statistic', 'okay', 'disease', 'statistic', 'okay', 'knock', 'different', 'disease', 'knock', 'different', 'disease', 'knock', 'different', 'disease', 'know', 'probability', 'know', 'probability', 'know', 'probability', 'obtaining', 'false', 'positive', 'obtaining', 'false', 'positive', 'obtaining', 'false', 'positive', 'probability', 'obtaining', 'false', 'probability', 'obtaining', 'false', 'probability', 'obtaining', 'false', 'negative', 'probability', 'negative', 'probability', 'negative', 'probability', 'disease', 'disease', 'disease', 'okay', 'probability', 'okay', 'probability', 'okay', 'probability', 'disease', 'given', 'disease', 'given', 'disease', 'given', 'got', 'positive', 'test', 'got', 'positive', 'test', 'got', 'positive', 'test', 'even', 'solving', 'even', 'solving', 'even', 'solving', 'mean', 'false', 'positive', 'mean', 'false', 'positive', 'mean', 'false', 'positive', 'whats', 'different', 'way', 'rewrite', 'whats', 'different', 'way', 'rewrite', 'whats', 'different', 'way', 'rewrite', 'false', 'positive', 'test', 'false', 'positive', 'test', 'false', 'positive', 'test', 'positive', 'dont', 'actually', 'positive', 'dont', 'actually', 'positive', 'dont', 'actually', 'disease', 'probability', 'disease', 'probability', 'disease', 'probability', 'youd', 'positive', 'test', 'given', 'youd', 'positive', 'test', 'given', 'youd', 'positive', 'test', 'given', 'disease', 'disease', 'disease', 'right', 'right', 'right', 'similarly', 'false', 'negative', 'similarly', 'false', 'negative', 'similarly', 'false', 'negative', 'probability', 'test', 'probability', 'test', 'probability', 'test', 'negative', 'given', 'actually', 'negative', 'given', 'actually', 'negative', 'given', 'actually', 'disease', 'put', 'disease', 'put', 'disease', 'put', 'chart', 'chart', 'chart', 'example', 'might', 'positive', 'might', 'positive', 'negative', 'test', 'might', 'negative', 'test', 'might', 'negative', 'test', 'might', 'disease', 'disease', 'disease', 'disease', 'disease', 'disease', 'disease', 'disease', 'disease', 'well', 'probability', 'test', 'well', 'probability', 'test', 'well', 'probability', 'test', 'positive', 'actually', 'disease', 'positive', 'actually', 'disease', 'positive', 'actually', 'disease', 'okay', 'thats', 'okay', 'thats', 'okay', 'thats', 'false', 'negative', 'false', 'negative', 'false', 'negative', 'testing', 'negative', 'testing', 'negative', 'testing', 'negative', 'dont', 'actually', 'disease', 'probability', 'test', 'probability', 'test', 'positive', 'dont', 'disease', 'positive', 'dont', 'disease', 'positive', 'dont', 'disease', 'plus', 'probability', 'test', 'plus', 'probability', 'test', 'plus', 'probability', 'test', 'negative', 'given', 'dont', 'negative', 'given', 'dont', 'negative', 'given', 'dont', 'disease', 'disease', 'disease', 'sum', 'one', 'sum', 'one', 'sum', 'one', 'okay', 'dont', 'okay', 'dont', 'okay', 'dont', 'disease', 'disease', 'disease', 'probability', 'youre', 'testing', 'positive', 'probability', 'youre', 'testing', 'positive', 'probability', 'youre', 'testing', 'positive', 'probably', 'youre', 'testing', 'probably', 'youre', 'testing', 'probably', 'youre', 'testing', 'negative', 'probability', 'negative', 'probability', 'negative', 'probability', 'total', 'one', 'total', 'one', 'total', 'one', 'mean', 'mean', 'mean', 'probability', 'negative', 'probability', 'negative', 'probability', 'negative', 'disease', 'reciprocal', 'disease', 'reciprocal', 'disease', 'reciprocal', 'would', 'opposite', 'would', 'opposite', 'would', 'opposite', 'minus', 'whatever', 'minus', 'whatever', 'minus', 'whatever', 'probability', 'probability', 'probability', 'similarly', 'similarly', 'similarly', 'oops', 'probability', 'probability', 'probability', 'know', 'test', 'negative', 'know', 'test', 'negative', 'know', 'test', 'negative', 'disease', 'plus', 'probability', 'disease', 'plus', 'probability', 'disease', 'plus', 'probability', 'test', 'positive', 'disease', 'test', 'positive', 'disease', 'test', 'positive', 'disease', 'equal', 'one', 'equal', 'one', 'equal', 'one', 'probability', 'chart', 'probability', 'chart', 'probability', 'chart', 'probability', 'disease', 'probability', 'disease', 'probability', 'disease', 'point', 'zero', 'point', 'one', 'mean', 'point', 'zero', 'point', 'one', 'mean', 'point', 'zero', 'point', 'one', 'mean', 'ten', 'percent', 'probability', 'ten', 'percent', 'probability', 'ten', 'percent', 'probability', 'actually', 'disease', 'right', 'actually', 'disease', 'right', 'actually', 'disease', 'right', 'like', 'like', 'like', 'general', 'population', 'general', 'population', 'general', 'population', 'probability', 'disease', 'probability', 'disease', 'probability', 'disease', 'okay', 'probability', 'okay', 'probability', 'okay', 'probability', 'disease', 'given', 'got', 'disease', 'given', 'got', 'disease', 'given', 'got', 'positive', 'got', 'positive', 'positive', 'got', 'positive', 'positive', 'got', 'positive', 'test', 'well', 'remember', 'write', 'test', 'well', 'remember', 'write', 'test', 'well', 'remember', 'write', 'term', 'bayes', 'rule', 'right', 'term', 'bayes', 'rule', 'right', 'term', 'bayes', 'rule', 'right', 'use', 'rule', 'use', 'rule', 'use', 'rule', 'probability', 'positive', 'probability', 'positive', 'probability', 'positive', 'test', 'given', 'disease', 'test', 'given', 'disease', 'test', 'given', 'disease', 'time', 'probability', 'time', 'probability', 'time', 'probability', 'disease', 'disease', 'disease', 'divided', 'probability', 'divided', 'probability', 'divided', 'probability', 'evidence', 'positive', 'test', 'evidence', 'positive', 'test', 'evidence', 'positive', 'test', 'right', 'let', 'plug', 'number', 'right', 'let', 'plug', 'number', 'right', 'let', 'plug', 'number', 'probability', 'probability', 'probability', 'positive', 'test', 'given', 'disease', 'positive', 'test', 'given', 'disease', 'positive', 'test', 'given', 'disease', 'probability', 'probability', 'probability', 'disease', 'disease', 'disease', 'value', 'value', 'value', 'okay', 'okay', 'probability', 'positive', 'probability', 'positive', 'probability', 'positive', 'test', 'test', 'test', 'okay', 'probability', 'okay', 'probability', 'okay', 'probability', 'positive', 'test', 'given', 'positive', 'test', 'given', 'positive', 'test', 'given', 'actually', 'disease', 'actually', 'disease', 'actually', 'disease', 'disease', 'disease', 'disease', 'case', 'case', 'case', 'probability', 'probability', 'probability', 'negative', 'test', 'given', 'sorry', 'positive', 'negative', 'test', 'given', 'sorry', 'positive', 'negative', 'test', 'given', 'sorry', 'positive', 'test', 'giving', 'disease', 'time', 'probability', 'actually', 'time', 'probability', 'actually', 'disease', 'disease', 'disease', 'okay', 'expand', 'okay', 'expand', 'okay', 'expand', 'probability', 'positive', 'test', 'probability', 'positive', 'test', 'probability', 'positive', 'test', 'two', 'different', 'case', 'two', 'different', 'case', 'two', 'different', 'case', 'disease', 'dont', 'disease', 'dont', 'disease', 'dont', 'whats', 'probability', 'whats', 'probability', 'whats', 'probability', 'positive', 'test', 'either', 'one', 'positive', 'test', 'either', 'one', 'positive', 'test', 'either', 'one', 'case', 'case', 'case', 'expression', 'would', 'become', 'expression', 'would', 'become', 'expression', 'would', 'become', 'time', 'time', 'time', 'plus', 'plus', 'plus', 'thats', 'probability', 'thats', 'probability', 'thats', 'probability', 'testing', 'positive', 'dont', 'testing', 'positive', 'dont', 'testing', 'positive', 'dont', 'disease', 'disease', 'disease', 'time', 'probability', 'time', 'probability', 'time', 'probability', 'dont', 'actually', 'disease', 'dont', 'actually', 'disease', 'dont', 'actually', 'disease', 'thats', 'minus', 'probability', 'thats', 'minus', 'probability', 'thats', 'minus', 'probability', 'population', 'doesnt', 'disease', 'population', 'doesnt', 'disease', 'population', 'doesnt', 'disease', 'let', 'multiplication', 'let', 'multiplication', 'let', 'multiplication', 'get', 'answer', 'get', 'answer', 'get', 'answer', 'percent', 'right', 'actually', 'expand', 'right', 'actually', 'expand', 'expand', 'bayes', 'rule', 'expand', 'bayes', 'rule', 'expand', 'bayes', 'rule', 'apply', 'classification', 'apply', 'classification', 'apply', 'classification', 'call', 'naive', 'bayes', 'call', 'naive', 'bayes', 'call', 'naive', 'bayes', 'first', 'little', 'terminology', 'first', 'little', 'terminology', 'first', 'little', 'terminology', 'posterior', 'posterior', 'posterior', 'asking', 'asking', 'asking', 'hey', 'probability', 'hey', 'probability', 'hey', 'probability', 'class', 'mean', 'class', 'mean', 'class', 'mean', 'know', 'different', 'category', 'know', 'different', 'category', 'know', 'different', 'category', 'category', 'class', 'whatever', 'category', 'class', 'whatever', 'category', 'class', 'whatever', 'category', 'one', 'might', 'cat', 'category', 'two', 'category', 'one', 'might', 'cat', 'category', 'two', 'category', 'one', 'might', 'cat', 'category', 'two', 'dog', 'category', 'three', 'lizard', 'dog', 'category', 'three', 'lizard', 'dog', 'category', 'three', 'lizard', 'way', 'category', 'way', 'category', 'way', 'category', 'number', 'number', 'number', 'okay', 'okay', 'okay', 'probability', 'probability', 'probability', 'specific', 'sample', 'specific', 'sample', 'specific', 'sample', 'feature', 'factor', 'feature', 'factor', 'feature', 'factor', 'one', 'sample', 'one', 'sample', 'one', 'sample', 'probability', 'fitting', 'probability', 'fitting', 'probability', 'fitting', 'category', 'one', 'two', 'three', 'four', 'category', 'one', 'two', 'three', 'four', 'category', 'one', 'two', 'three', 'four', 'whatever', 'right', 'thats', 'whatever', 'right', 'thats', 'whatever', 'right', 'thats', 'asking', 'probability', 'asking', 'probability', 'asking', 'probability', 'know', 'actually', 'class', 'know', 'actually', 'class', 'know', 'actually', 'class', 'given', 'evidence', 'see', 'given', 'evidence', 'see', 'given', 'evidence', 'see', 'likelihood', 'likelihood', 'likelihood', 'quantity', 'saying', 'quantity', 'saying', 'quantity', 'saying', 'okay', 'okay', 'okay', 'well', 'given', 'know', 'assume', 'assume', 'well', 'given', 'know', 'assume', 'assume', 'well', 'given', 'know', 'assume', 'assume', 'assumed', 'class', 'class', 'okay', 'assumed', 'class', 'class', 'okay', 'assumed', 'class', 'class', 'okay', 'assume', 'category', 'assume', 'category', 'assume', 'category', 'well', 'likelihood', 'actually', 'well', 'likelihood', 'actually', 'well', 'likelihood', 'actually', 'seeing', 'seeing', 'seeing', 'different', 'feature', 'different', 'feature', 'different', 'feature', 'category', 'prior', 'like', 'prior', 'like', 'entire', 'population', 'thing', 'entire', 'population', 'thing', 'entire', 'population', 'thing', 'probability', 'probability', 'probability', 'probability', 'class', 'probability', 'class', 'probability', 'class', 'general', 'like', 'general', 'like', 'general', 'like', 'know', 'entire', 'data', 'set', 'know', 'entire', 'data', 'set', 'know', 'entire', 'data', 'set', 'percentage', 'chance', 'percentage', 'chance', 'percentage', 'chance', 'image', 'cat', 'many', 'cat', 'image', 'cat', 'many', 'cat', 'image', 'cat', 'many', 'cat', 'right', 'right', 'right', 'called', 'called', 'called', 'evidence', 'evidence', 'evidence', 'trying', 'trying', 'trying', 'changing', 'prior', 'changing', 'prior', 'changing', 'prior', 'creating', 'new', 'posterior', 'probability', 'creating', 'new', 'posterior', 'probability', 'creating', 'new', 'posterior', 'probability', 'built', 'upon', 'prior', 'using', 'sort', 'built', 'upon', 'prior', 'using', 'sort', 'built', 'upon', 'prior', 'using', 'sort', 'evidence', 'right', 'evidence', 'evidence', 'right', 'evidence', 'evidence', 'right', 'evidence', 'probability', 'probability', 'probability', 'thats', 'vocab', 'thats', 'vocab', 'thats', 'vocab', 'rule', 'naive', 'bayes', 'rule', 'naive', 'bayes', 'whoa', 'okay', 'let', 'digest', 'whoa', 'okay', 'let', 'digest', 'whoa', 'okay', 'let', 'digest', 'little', 'bit', 'okay', 'little', 'bit', 'okay', 'little', 'bit', 'okay', 'let', 'use', 'different', 'color', 'let', 'use', 'different', 'color', 'let', 'use', 'different', 'color', 'side', 'equation', 'asking', 'side', 'equation', 'asking', 'side', 'equation', 'asking', 'asking', 'asking', 'asking', 'probability', 'probability', 'probability', 'sum', 'class', 'sum', 'class', 'sum', 'class', 'given', 'know', 'first', 'given', 'know', 'first', 'given', 'know', 'first', 'input', 'second', 'input', 'input', 'second', 'input', 'input', 'second', 'input', 'know', 'third', 'fourth', 'nth', 'know', 'third', 'fourth', 'nth', 'know', 'third', 'fourth', 'nth', 'input', 'input', 'input', 'let', 'say', 'classification', 'let', 'say', 'classification', 'let', 'say', 'classification', 'play', 'soccer', 'today', 'play', 'soccer', 'today', 'play', 'soccer', 'today', 'okay', 'let', 'say', 'okay', 'okay', 'let', 'say', 'okay', 'okay', 'let', 'say', 'okay', 'much', 'wind', 'much', 'much', 'wind', 'much', 'much', 'wind', 'much', 'rain', 'day', 'rain', 'day', 'rain', 'day', 'week', 'let', 'say', 'week', 'let', 'say', 'week', 'let', 'say', 'raining', 'windy', 'raining', 'windy', 'raining', 'windy', 'wednesday', 'play', 'soccer', 'wednesday', 'play', 'soccer', 'wednesday', 'play', 'soccer', 'let', 'use', 'bayes', 'rule', 'let', 'use', 'bayes', 'rule', 'let', 'use', 'bayes', 'rule', 'equal', 'probability', 'equal', 'probability', 'joint', 'probability', 'given', 'joint', 'probability', 'given', 'joint', 'probability', 'given', 'class', 'class', 'class', 'time', 'probability', 'class', 'time', 'probability', 'class', 'time', 'probability', 'class', 'probability', 'probability', 'probability', 'evidence', 'okay', 'okay', 'fancy', 'symbol', 'fancy', 'symbol', 'fancy', 'symbol', 'mean', 'proportional', 'mean', 'proportional', 'mean', 'proportional', 'equal', 'sign', 'mean', 'equal', 'equal', 'sign', 'mean', 'equal', 'equal', 'sign', 'mean', 'equal', 'like', 'little', 'squiggly', 'sign', 'mean', 'like', 'little', 'squiggly', 'sign', 'mean', 'like', 'little', 'squiggly', 'sign', 'mean', 'proportional', 'proportional', 'proportional', 'okay', 'okay', 'okay', 'denominator', 'denominator', 'denominator', 'might', 'notice', 'impact', 'might', 'notice', 'impact', 'might', 'notice', 'impact', 'class', 'like', 'number', 'class', 'like', 'number', 'class', 'like', 'number', 'doesnt', 'depend', 'class', 'right', 'doesnt', 'depend', 'class', 'right', 'doesnt', 'depend', 'class', 'right', 'going', 'constant', 'going', 'constant', 'going', 'constant', 'different', 'class', 'different', 'class', 'different', 'class', 'going', 'make', 'thing', 'going', 'make', 'thing', 'going', 'make', 'thing', 'simpler', 'going', 'say', 'simpler', 'going', 'say', 'simpler', 'going', 'say', 'probability', 'probability', 'probability', 'way', 'way', 'way', 'going', 'proportional', 'going', 'proportional', 'going', 'proportional', 'numerator', 'dont', 'care', 'numerator', 'dont', 'care', 'numerator', 'dont', 'care', 'denominator', 'denominator', 'denominator', 'every', 'single', 'class', 'every', 'single', 'class', 'every', 'single', 'class', 'proportional', 'proportional', 'proportional', 'given', 'given', 'given', 'class', 'time', 'probability', 'class', 'time', 'probability', 'class', 'time', 'probability', 'class', 'class', 'class', 'okay', 'okay', 'okay', 'right', 'right', 'right', 'naive', 'bayes', 'naive', 'bayes', 'naive', 'bayes', 'point', 'naive', 'point', 'naive', 'point', 'naive', 'actually', 'actually', 'actually', 'joint', 'probability', 'joint', 'probability', 'joint', 'probability', 'assuming', 'different', 'assuming', 'different', 'assuming', 'different', 'thing', 'thing', 'thing', 'independent', 'soccer', 'independent', 'soccer', 'independent', 'soccer', 'example', 'example', 'example', 'know', 'know', 'know', 'probability', 'playing', 'probability', 'playing', 'probability', 'playing', 'soccer', 'soccer', 'soccer', 'probability', 'know', 'probability', 'know', 'probability', 'know', 'windy', 'rainy', 'windy', 'rainy', 'windy', 'rainy', 'wednesday', 'thing', 'wednesday', 'thing', 'wednesday', 'thing', 'independent', 'assuming', 'theyre', 'independent', 'assuming', 'theyre', 'independent', 'assuming', 'theyre', 'independent', 'independent', 'independent', 'mean', 'actually', 'write', 'mean', 'actually', 'write', 'mean', 'actually', 'write', 'part', 'equation', 'part', 'equation', 'part', 'equation', 'term', 'term', 'term', 'multiply', 'multiply', 'multiply', 'together', 'probability', 'together', 'probability', 'together', 'probability', 'first', 'first', 'first', 'feature', 'given', 'class', 'feature', 'given', 'class', 'feature', 'given', 'class', 'time', 'probability', 'time', 'probability', 'time', 'probability', 'second', 'feature', 'given', 'thats', 'second', 'feature', 'given', 'thats', 'second', 'feature', 'given', 'thats', 'probably', 'like', 'class', 'way', 'probably', 'like', 'class', 'way', 'probably', 'like', 'class', 'way', 'know', 'nth', 'know', 'nth', 'know', 'nth', 'feature', 'feature', 'feature', 'given', 'class', 'given', 'class', 'given', 'class', 'expands', 'expands', 'expands', 'right', 'mean', 'right', 'mean', 'right', 'mean', 'proportional', 'proportional', 'proportional', 'thing', 'expanded', 'thing', 'expanded', 'thing', 'expanded', 'time', 'time', 'time', 'going', 'write', 'going', 'write', 'going', 'write', 'probability', 'probability', 'probability', 'class', 'class', 'class', 'actually', 'going', 'use', 'actually', 'going', 'use', 'actually', 'going', 'use', 'symbol', 'mean', 'huge', 'symbol', 'mean', 'huge', 'symbol', 'mean', 'huge', 'multiplication', 'mean', 'multiply', 'multiplication', 'mean', 'multiply', 'multiplication', 'mean', 'multiply', 'everything', 'everything', 'everything', 'right', 'probability', 'right', 'probability', 'right', 'probability', 'given', 'given', 'given', 'class', 'class', 'class', 'okay', 'going', 'okay', 'going', 'okay', 'going', 'first', 'first', 'first', 'way', 'end', 'mean', 'way', 'end', 'mean', 'way', 'end', 'mean', 'every', 'single', 'every', 'single', 'every', 'single', 'multiplying', 'multiplying', 'multiplying', 'probability', 'together', 'probability', 'together', 'probability', 'together', 'thats', 'thats', 'thats', 'come', 'come', 'come', 'wrap', 'oops', 'wrap', 'oops', 'wrap', 'oops', 'line', 'wrap', 'plain', 'english', 'line', 'wrap', 'plain', 'english', 'line', 'wrap', 'plain', 'english', 'basically', 'saying', 'basically', 'saying', 'basically', 'saying', 'probability', 'know', 'probability', 'know', 'probability', 'know', 'category', 'given', 'category', 'given', 'category', 'given', 'different', 'feature', 'different', 'feature', 'different', 'feature', 'proportional', 'probability', 'proportional', 'probability', 'proportional', 'probability', 'class', 'general', 'class', 'general', 'class', 'general', 'time', 'probability', 'time', 'probability', 'time', 'probability', 'feature', 'feature', 'feature', 'given', 'one', 'class', 'given', 'one', 'class', 'given', 'one', 'class', 'testing', 'testing', 'testing', 'probability', 'probability', 'probability', 'know', 'playing', 'soccer', 'know', 'playing', 'soccer', 'know', 'playing', 'soccer', 'today', 'given', 'rainy', 'windy', 'today', 'given', 'rainy', 'windy', 'today', 'given', 'rainy', 'windy', 'wednesday', 'wednesday', 'wednesday', 'proportional', 'okay', 'well', 'proportional', 'okay', 'well', 'proportional', 'okay', 'well', 'probability', 'play', 'probability', 'play', 'probability', 'play', 'soccer', 'anyways', 'soccer', 'anyways', 'soccer', 'anyways', 'time', 'probability', 'time', 'probability', 'time', 'probability', 'rainy', 'given', 'playing', 'soccer', 'rainy', 'given', 'playing', 'soccer', 'rainy', 'given', 'playing', 'soccer', 'time', 'probability', 'time', 'probability', 'time', 'probability', 'windy', 'given', 'playing', 'soccer', 'windy', 'given', 'playing', 'soccer', 'windy', 'given', 'playing', 'soccer', 'many', 'time', 'playing', 'soccer', 'many', 'time', 'playing', 'soccer', 'many', 'time', 'playing', 'soccer', 'windy', 'know', 'windy', 'know', 'windy', 'know', 'many', 'time', 'whats', 'many', 'time', 'whats', 'many', 'time', 'whats', 'probability', 'thats', 'wednesday', 'given', 'probability', 'thats', 'wednesday', 'given', 'probability', 'thats', 'wednesday', 'given', 'playing', 'soccer', 'playing', 'soccer', 'playing', 'soccer', 'okay', 'okay', 'okay', 'use', 'order', 'make', 'use', 'order', 'make', 'use', 'order', 'make', 'classification', 'classification', 'classification', 'thats', 'come', 'hat', 'thats', 'come', 'hat', 'thats', 'come', 'hat', 'predicted', 'predicted', 'predicted', 'going', 'equal', 'something', 'called', 'going', 'equal', 'something', 'called', 'going', 'equal', 'something', 'called', 'arg', 'max', 'arg', 'max', 'arg', 'max', 'expression', 'expression', 'expression', 'want', 'take', 'arg', 'max', 'well', 'want', 'take', 'arg', 'max', 'well', 'want', 'take', 'arg', 'max', 'well', 'want', 'want', 'want', 'okay', 'okay', 'okay', 'write', 'write', 'write', 'mean', 'probability', 'mean', 'probability', 'mean', 'probability', 'class', 'given', 'class', 'given', 'class', 'given', 'evidence', 'well', 'going', 'take', 'well', 'going', 'take', 'maximizes', 'maximizes', 'maximizes', 'expression', 'right', 'expression', 'right', 'expression', 'right', 'thats', 'arc', 'max', 'mean', 'thats', 'arc', 'max', 'mean', 'thats', 'arc', 'max', 'mean', 'zero', 'oops', 'zero', 'oops', 'zero', 'oops', 'one', 'one', 'one', 'many', 'category', 'many', 'category', 'many', 'category', 'going', 'going', 'going', 'going', 'solve', 'going', 'solve', 'going', 'solve', 'expression', 'find', 'expression', 'find', 'expression', 'find', 'make', 'largest', 'make', 'largest', 'make', 'largest', 'okay', 'okay', 'okay', 'remember', 'instead', 'writing', 'remember', 'instead', 'writing', 'remember', 'instead', 'writing', 'formula', 'thanks', 'bayes', 'rule', 'formula', 'thanks', 'bayes', 'rule', 'formula', 'thanks', 'bayes', 'rule', 'helping', 'helping', 'helping', 'approximate', 'right', 'something', 'approximate', 'right', 'something', 'approximate', 'right', 'something', 'maybe', 'maybe', 'maybe', 'maybe', 'like', 'evidence', 'maybe', 'like', 'evidence', 'maybe', 'like', 'evidence', 'answer', 'based', 'answer', 'based', 'answer', 'based', 'training', 'set', 'principle', 'going', 'principle', 'going', 'finding', 'whatever', 'class', 'finding', 'whatever', 'class', 'finding', 'whatever', 'class', 'whatever', 'category', 'maximizes', 'whatever', 'category', 'maximizes', 'whatever', 'category', 'maximizes', 'expression', 'right', 'expression', 'right', 'expression', 'right', 'something', 'known', 'something', 'known', 'something', 'known', 'short', 'short', 'short', 'maximum', 'posteriori', 'pick', 'hypothesis', 'pick', 'pick', 'hypothesis', 'pick', 'probable', 'probable', 'probable', 'minimize', 'probability', 'minimize', 'probability', 'minimize', 'probability', 'misclassification', 'misclassification', 'misclassification', 'right', 'right', 'right', 'naive', 'bayes', 'naive', 'bayes', 'naive', 'bayes', 'back', 'notebook', 'back', 'notebook', 'back', 'notebook', 'like', 'imported', 'knearest', 'name', 'like', 'imported', 'knearest', 'name', 'like', 'imported', 'knearest', 'name', 'neighbor', 'classifier', 'naive', 'neighbor', 'classifier', 'naive', 'neighbor', 'classifier', 'naive', 'bayes', 'sklearnnaive', 'bayes', 'sklearnnaive', 'bayes', 'sklearnnaive', 'bayes', 'bayes', 'bayes', 'import', 'gaussian', 'import', 'gaussian', 'import', 'gaussian', 'naive', 'bayes', 'naive', 'bayes', 'naive', 'bayes', 'right', 'right', 'right', 'going', 'say', 'naive', 'bayes', 'going', 'say', 'naive', 'bayes', 'going', 'say', 'naive', 'bayes', 'model', 'equal', 'similar', 'model', 'equal', 'similar', 'model', 'equal', 'similar', 'going', 'going', 'say', 'model', 'going', 'fit', 'going', 'fit', 'train', 'train', 'train', 'train', 'train', 'train', 'right', 'like', 'might', 'actually', 'might', 'actually', 'going', 'set', 'going', 'set', 'going', 'set', 'exactly', 'like', 'going', 'exactly', 'like', 'going', 'exactly', 'like', 'going', 'make', 'prediction', 'make', 'prediction', 'make', 'prediction', 'going', 'instead', 'use', 'going', 'instead', 'use', 'going', 'instead', 'use', 'naive', 'bayes', 'model', 'naive', 'bayes', 'model', 'naive', 'bayes', 'model', 'course', 'going', 'run', 'course', 'going', 'run', 'course', 'going', 'run', 'classification', 'report', 'classification', 'report', 'classification', 'report', 'actually', 'going', 'put', 'actually', 'going', 'put', 'actually', 'going', 'put', 'cell', 'cell', 'cell', 'new', 'new', 'new', 'prediction', 'test', 'still', 'prediction', 'test', 'still', 'prediction', 'test', 'still', 'original', 'test', 'data', 'set', 'original', 'test', 'data', 'set', 'original', 'test', 'data', 'set', 'run', 'run', 'run', 'youll', 'see', 'youll', 'see', 'youll', 'see', 'okay', 'whats', 'going', 'get', 'worse', 'okay', 'whats', 'going', 'get', 'worse', 'okay', 'whats', 'going', 'get', 'worse', 'score', 'right', 'precision', 'score', 'right', 'precision', 'score', 'right', 'precision', 'look', 'slightly', 'worse', 'look', 'slightly', 'worse', 'look', 'slightly', 'worse', 'know', 'know', 'know', 'precision', 'recall', 'score', 'precision', 'recall', 'score', 'precision', 'recall', 'score', 'look', 'slightly', 'worse', 'look', 'slightly', 'worse', 'look', 'slightly', 'worse', 'different', 'category', 'total', 'different', 'category', 'total', 'different', 'category', 'total', 'accuracy', 'mean', 'still', 'accuracy', 'mean', 'still', 'accuracy', 'mean', 'still', 'shabby', 'shabby', 'shabby', 'still', 'still', 'still', 'okay', 'okay', 'okay', 'know', 'great', 'know', 'great', 'know', 'great', 'okay', 'let', 'move', 'logistic', 'okay', 'let', 'move', 'logistic', 'okay', 'let', 'move', 'logistic', 'regression', 'regression', 'regression', 'ive', 'drawn', 'plot', 'ive', 'drawn', 'plot', 'ive', 'drawn', 'plot', 'label', 'label', 'label', 'one', 'axis', 'maybe', 'one', 'one', 'axis', 'maybe', 'one', 'one', 'axis', 'maybe', 'one', 'feature', 'let', 'say', 'feature', 'let', 'say', 'feature', 'let', 'say', 'one', 'feature', 'case', 'one', 'feature', 'case', 'one', 'feature', 'case', 'deck', 'zero', 'right', 'deck', 'zero', 'right', 'deck', 'zero', 'right', 'well', 'well', 'well', 'see', 'see', 'see', 'know', 'one', 'class', 'type', 'know', 'one', 'class', 'type', 'know', 'one', 'class', 'type', 'know', 'one', 'class', 'type', 'know', 'one', 'class', 'type', 'know', 'one', 'class', 'type', 'zero', 'zero', 'zero', 'class', 'type', 'one', 'class', 'type', 'one', 'class', 'type', 'one', 'okay', 'okay', 'okay', 'many', 'guy', 'familiar', 'many', 'guy', 'familiar', 'many', 'guy', 'familiar', 'regression', 'let', 'start', 'regression', 'let', 'start', 'regression', 'let', 'start', 'draw', 'regression', 'line', 'draw', 'regression', 'line', 'draw', 'regression', 'line', 'might', 'look', 'something', 'might', 'look', 'something', 'might', 'look', 'something', 'like', 'like', 'like', 'like', 'right', 'right', 'well', 'doesnt', 'seem', 'good', 'well', 'doesnt', 'seem', 'good', 'well', 'doesnt', 'seem', 'good', 'model', 'like', 'would', 'use', 'model', 'like', 'would', 'use', 'model', 'like', 'would', 'use', 'specific', 'line', 'predict', 'specific', 'line', 'predict', 'specific', 'line', 'predict', 'right', 'right', 'right', 'iffy', 'iffy', 'iffy', 'okay', 'okay', 'okay', 'example', 'might', 'say', 'example', 'might', 'say', 'example', 'might', 'say', 'okay', 'well', 'seems', 'like', 'know', 'okay', 'well', 'seems', 'like', 'know', 'okay', 'well', 'seems', 'like', 'know', 'everything', 'downwards', 'would', 'everything', 'downwards', 'would', 'everything', 'downwards', 'would', 'one', 'class', 'type', 'upwards', 'would', 'one', 'class', 'type', 'upwards', 'would', 'one', 'class', 'type', 'upwards', 'would', 'another', 'class', 'type', 'another', 'class', 'type', 'another', 'class', 'type', 'look', 'youre', 'look', 'youre', 'look', 'youre', 'visually', 'tell', 'okay', 'like', 'visually', 'tell', 'okay', 'like', 'visually', 'tell', 'okay', 'like', 'line', 'doesnt', 'make', 'sense', 'thing', 'line', 'doesnt', 'make', 'sense', 'thing', 'line', 'doesnt', 'make', 'sense', 'thing', 'dot', 'along', 'line', 'dot', 'along', 'line', 'dot', 'along', 'line', 'reason', 'reason', 'reason', 'classification', 'regression', 'classification', 'regression', 'classification', 'regression', 'okay', 'okay', 'okay', 'well', 'first', 'let', 'start', 'well', 'first', 'let', 'start', 'well', 'first', 'let', 'start', 'know', 'know', 'know', 'model', 'model', 'model', 'use', 'line', 'equal', 'use', 'line', 'equal', 'use', 'line', 'equal', 'whatever', 'let', 'say', 'whatever', 'let', 'say', 'whatever', 'let', 'say', 'plus', 'intercept', 'right', 'plus', 'intercept', 'right', 'plus', 'intercept', 'right', 'slope', 'slope', 'slope', 'use', 'linear', 'regression', 'use', 'linear', 'regression', 'use', 'linear', 'regression', 'actually', 'hat', 'actually', 'hat', 'actually', 'hat', 'right', 'working', 'right', 'working', 'right', 'working', 'linear', 'regression', 'linear', 'regression', 'linear', 'regression', 'actually', 'estimating', 'model', 'actually', 'estimating', 'model', 'actually', 'estimating', 'model', 'probability', 'whats', 'probability', 'probability', 'whats', 'probability', 'probability', 'whats', 'probability', 'class', 'class', 'class', 'class', 'class', 'class']"
+1,[]
+"1.
+so here let's rewrite this so here let's rewrite this so here let's rewrite this
+as p equals mx as p equals mx as p equals mx
+plus b okay well mx plus b that can range okay well mx plus b that can range
+you know from negative infinity to you know from negative infinity to you know from negative infinity to
+infinity right for any for any value of infinity right for any for any value of infinity right for any for any value of
+x it goes from negative infinity to x it goes from negative infinity to x it goes from negative infinity to
+infinity infinity infinity
+but probability we know probably one of but probability we know probably one of but probability we know probably one of
+the rules of probability is that the rules of probability is that the rules of probability is that
+probability has to stay between zero and probability has to stay between zero and probability has to stay between zero and
+one one one
+so how do we fix this so how do we fix this so how do we fix this
+well maybe instead of well maybe instead of well maybe instead of
+just setting the probability equal to just setting the probability equal to just setting the probability equal to
+that we can set the odds that we can set the odds that we can set the odds
+equal to this so by that i mean okay equal to this so by that i mean okay equal to this so by that i mean okay
+let's do probability divided by 1 minus let's do probability divided by 1 minus let's do probability divided by 1 minus
+the probability okay so now it becomes the probability okay so now it becomes the probability okay so now it becomes
+this ratio this ratio this ratio
+now this ratio is allowed to take on now this ratio is allowed to take on now this ratio is allowed to take on
+infinite values infinite values infinite values
+but there's still one issue here but there's still one issue here but there's still one issue here
+let me move this over a bit let me move this over a bit let me move this over a bit
+the one issue here is that the one issue here is that the one issue here is that
+mx plus b that can still be negative mx plus b that can still be negative mx plus b that can still be negative
+right like if you know i have a negative right like if you know i have a negative right like if you know i have a negative
+slope if i have a negative b if i have slope if i have a negative b if i have slope if i have a negative b if i have
+some negative x's in there i don't know some negative x's in there i don't know some negative x's in there i don't know
+but that can be that's allowed to be but that can be that's allowed to be but that can be that's allowed to be
+negative negative negative
+so how do we fix that so how do we fix that so how do we fix that
+we do that by actually taking the log we do that by actually taking the log we do that by actually taking the log
+of the odds of the odds of the odds
+okay so now i have the log of you know some so now i have the log of you know some
+probability divided by 1 minus the probability divided by 1 minus the probability divided by 1 minus the
+probability and now that is on a range probability and now that is on a range probability and now that is on a range
+of negative infinity to infinity which of negative infinity to infinity which of negative infinity to infinity which
+is good because the range of log should is good because the range of log should is good because the range of log should
+be negative infinity to infinity be negative infinity to infinity be negative infinity to infinity
+now how do i solve for p the probability now how do i solve for p the probability now how do i solve for p the probability
+well the first thing i can do is take well the first thing i can do is take well the first thing i can do is take
+you know you know you know
+i can remove the log by taking the not i can remove the log by taking the not i can remove the log by taking the not
+the um the um the um
+e to the whatever is on both sides e to the whatever is on both sides e to the whatever is on both sides
+so that gives me the probability so that gives me the probability so that gives me the probability
+over the one minus the probability over the one minus the probability over the one minus the probability
+is now equal to e to the m x plus b is now equal to e to the m x plus b is now equal to e to the m x plus b
+okay okay okay
+so let's multiply that out so the so let's multiply that out so the so let's multiply that out so the
+probability is equal to probability is equal to probability is equal to
+one minus probability e to the m x plus one minus probability e to the m x plus one minus probability e to the m x plus
+b b b
+so p is equal to e to the m x plus b so p is equal to e to the m x plus b so p is equal to e to the m x plus b
+minus p minus p minus p
+times e to the m x plus b times e to the m x plus b times e to the m x plus b
+and now we have we can move like terms and now we have we can move like terms and now we have we can move like terms
+to one side so if i do p to one side so if i do p to one side so if i do p
+uh so basically i'm moving this over so uh so basically i'm moving this over so uh so basically i'm moving this over so
+i'm adding p so now p one plus i'm adding p so now p one plus i'm adding p so now p one plus
+e to the m x plus b e to the m x plus b e to the m x plus b
+is equal to is equal to is equal to
+e to the m x plus b and let me change e to the m x plus b and let me change e to the m x plus b and let me change
+this parenthesis make it a little bigger this parenthesis make it a little bigger this parenthesis make it a little bigger
+so now my probability can be e to the mx so now my probability can be e to the mx so now my probability can be e to the mx
+plus b plus b plus b
+divided by 1 plus e to the mx divided by 1 plus e to the mx divided by 1 plus e to the mx
+plus b okay okay
+well well well
+let me just rewrite this really quickly let me just rewrite this really quickly let me just rewrite this really quickly
+i want a numerator of one on top i want a numerator of one on top i want a numerator of one on top
+okay so what i'm going to do is i'm okay so what i'm going to do is i'm okay so what i'm going to do is i'm
+going to multiply going to multiply going to multiply
+this by negative mx plus b this by negative mx plus b this by negative mx plus b
+and then also the bottom by negative mx and then also the bottom by negative mx and then also the bottom by negative mx
+plus b and i'm allowed to do that plus b and i'm allowed to do that plus b and i'm allowed to do that
+because because because
+this over this is 1.","['let', 'rewrite', 'let', 'rewrite', 'let', 'rewrite', 'equal', 'equal', 'equal', 'plus', 'okay', 'well', 'plus', 'range', 'okay', 'well', 'plus', 'range', 'know', 'negative', 'infinity', 'know', 'negative', 'infinity', 'know', 'negative', 'infinity', 'infinity', 'right', 'value', 'infinity', 'right', 'value', 'infinity', 'right', 'value', 'go', 'negative', 'infinity', 'go', 'negative', 'infinity', 'go', 'negative', 'infinity', 'infinity', 'infinity', 'infinity', 'probability', 'know', 'probably', 'one', 'probability', 'know', 'probably', 'one', 'probability', 'know', 'probably', 'one', 'rule', 'probability', 'rule', 'probability', 'rule', 'probability', 'probability', 'stay', 'zero', 'probability', 'stay', 'zero', 'probability', 'stay', 'zero', 'one', 'one', 'one', 'fix', 'fix', 'fix', 'well', 'maybe', 'instead', 'well', 'maybe', 'instead', 'well', 'maybe', 'instead', 'setting', 'probability', 'equal', 'setting', 'probability', 'equal', 'setting', 'probability', 'equal', 'set', 'odds', 'set', 'odds', 'set', 'odds', 'equal', 'mean', 'okay', 'equal', 'mean', 'okay', 'equal', 'mean', 'okay', 'let', 'probability', 'divided', 'minus', 'let', 'probability', 'divided', 'minus', 'let', 'probability', 'divided', 'minus', 'probability', 'okay', 'becomes', 'probability', 'okay', 'becomes', 'probability', 'okay', 'becomes', 'ratio', 'ratio', 'ratio', 'ratio', 'allowed', 'take', 'ratio', 'allowed', 'take', 'ratio', 'allowed', 'take', 'infinite', 'value', 'infinite', 'value', 'infinite', 'value', 'there', 'still', 'one', 'issue', 'there', 'still', 'one', 'issue', 'there', 'still', 'one', 'issue', 'let', 'move', 'bit', 'let', 'move', 'bit', 'let', 'move', 'bit', 'one', 'issue', 'one', 'issue', 'one', 'issue', 'plus', 'still', 'negative', 'plus', 'still', 'negative', 'plus', 'still', 'negative', 'right', 'like', 'know', 'negative', 'right', 'like', 'know', 'negative', 'right', 'like', 'know', 'negative', 'slope', 'negative', 'slope', 'negative', 'slope', 'negative', 'negative', 'dont', 'know', 'negative', 'dont', 'know', 'negative', 'dont', 'know', 'thats', 'allowed', 'thats', 'allowed', 'thats', 'allowed', 'negative', 'negative', 'negative', 'fix', 'fix', 'fix', 'actually', 'taking', 'log', 'actually', 'taking', 'log', 'actually', 'taking', 'log', 'odds', 'odds', 'odds', 'okay', 'log', 'know', 'log', 'know', 'probability', 'divided', 'minus', 'probability', 'divided', 'minus', 'probability', 'divided', 'minus', 'probability', 'range', 'probability', 'range', 'probability', 'range', 'negative', 'infinity', 'infinity', 'negative', 'infinity', 'infinity', 'negative', 'infinity', 'infinity', 'good', 'range', 'log', 'good', 'range', 'log', 'good', 'range', 'log', 'negative', 'infinity', 'infinity', 'negative', 'infinity', 'infinity', 'negative', 'infinity', 'infinity', 'solve', 'probability', 'solve', 'probability', 'solve', 'probability', 'well', 'first', 'thing', 'take', 'well', 'first', 'thing', 'take', 'well', 'first', 'thing', 'take', 'know', 'know', 'know', 'remove', 'log', 'taking', 'remove', 'log', 'taking', 'remove', 'log', 'taking', 'whatever', 'side', 'whatever', 'side', 'whatever', 'side', 'give', 'probability', 'give', 'probability', 'give', 'probability', 'one', 'minus', 'probability', 'one', 'minus', 'probability', 'one', 'minus', 'probability', 'equal', 'plus', 'equal', 'plus', 'equal', 'plus', 'okay', 'okay', 'okay', 'let', 'multiply', 'let', 'multiply', 'let', 'multiply', 'probability', 'equal', 'probability', 'equal', 'probability', 'equal', 'one', 'minus', 'probability', 'plus', 'one', 'minus', 'probability', 'plus', 'one', 'minus', 'probability', 'plus', 'equal', 'plus', 'equal', 'plus', 'equal', 'plus', 'minus', 'minus', 'minus', 'time', 'plus', 'time', 'plus', 'time', 'plus', 'move', 'like', 'term', 'move', 'like', 'term', 'move', 'like', 'term', 'one', 'side', 'one', 'side', 'one', 'side', 'basically', 'moving', 'basically', 'moving', 'basically', 'moving', 'adding', 'one', 'plus', 'adding', 'one', 'plus', 'adding', 'one', 'plus', 'plus', 'plus', 'plus', 'equal', 'equal', 'equal', 'plus', 'let', 'change', 'plus', 'let', 'change', 'plus', 'let', 'change', 'parenthesis', 'make', 'little', 'bigger', 'parenthesis', 'make', 'little', 'bigger', 'parenthesis', 'make', 'little', 'bigger', 'probability', 'probability', 'probability', 'plus', 'plus', 'plus', 'divided', 'plus', 'divided', 'plus', 'divided', 'plus', 'plus', 'okay', 'okay', 'well', 'well', 'well', 'let', 'rewrite', 'really', 'quickly', 'let', 'rewrite', 'really', 'quickly', 'let', 'rewrite', 'really', 'quickly', 'want', 'numerator', 'one', 'top', 'want', 'numerator', 'one', 'top', 'want', 'numerator', 'one', 'top', 'okay', 'going', 'okay', 'going', 'okay', 'going', 'going', 'multiply', 'going', 'multiply', 'going', 'multiply', 'negative', 'plus', 'negative', 'plus', 'negative', 'plus', 'also', 'bottom', 'negative', 'also', 'bottom', 'negative', 'also', 'bottom', 'negative', 'plus', 'allowed', 'plus', 'allowed', 'plus', 'allowed']"
+this over this is 1.,[]
+,"['probability', 'equal', 'probability', 'equal', 'probability', 'equal', 'plus', 'plus', 'plus', 'negative', 'plus', 'negative', 'plus', 'negative', 'plus', 'rewrite', 'like', 'rewrite', 'like', 'rewrite', 'like', 'actually', 'form', 'special', 'actually', 'form', 'special', 'actually', 'form', 'special', 'function', 'function', 'function', 'called', 'sigmoid', 'function', 'function', 'sigmoid', 'function', 'sigmoid', 'function', 'sigmoid', 'function', 'look', 'something', 'like', 'look', 'something', 'like', 'look', 'something', 'like', 'sigmoid', 'know', 'sum', 'sigmoid', 'know', 'sum', 'sigmoid', 'know', 'sum', 'equal', 'equal', 'equal', 'plus', 'negative', 'plus', 'negative', 'plus', 'negative', 'essentially', 'essentially', 'essentially', 'rewrite', 'rewrite', 'rewrite', 'sigmoid', 'function', 'sigmoid', 'function', 'sigmoid', 'function', 'value', 'actually', 'plus', 'value', 'actually', 'plus', 'value', 'actually', 'plus', 'maybe', 'ill', 'change', 'maybe', 'ill', 'change', 'maybe', 'ill', 'change', 'make', 'bit', 'clear', 'doesnt', 'make', 'bit', 'clear', 'doesnt', 'make', 'bit', 'clear', 'doesnt', 'matter', 'variable', 'name', 'matter', 'variable', 'name', 'matter', 'variable', 'name', 'sigmoid', 'function', 'sigmoid', 'function', 'sigmoid', 'function', 'visually', 'sigmoid', 'function', 'look', 'visually', 'sigmoid', 'function', 'look', 'visually', 'sigmoid', 'function', 'look', 'like', 'like', 'like', 'go', 'zero', 'go', 'zero', 'go', 'zero', 'zero', 'zero', 'zero', 'one', 'one', 'one', 'look', 'something', 'look', 'something', 'look', 'something', 'like', 'curved', 'didnt', 'draw', 'like', 'curved', 'didnt', 'draw', 'like', 'curved', 'didnt', 'draw', 'well', 'let', 'try', 'well', 'let', 'try', 'well', 'let', 'try', 'hard', 'draw', 'something', 'draw', 'right', 'something', 'draw', 'right', 'like', 'like', 'like', 'okay', 'go', 'zero', 'one', 'okay', 'go', 'zero', 'one', 'okay', 'go', 'zero', 'one', 'might', 'notice', 'form', 'might', 'notice', 'form', 'might', 'notice', 'form', 'fit', 'fit', 'fit', 'shape', 'oops', 'oops', 'let', 'let', 'let', 'draw', 'sharper', 'fit', 'shape', 'draw', 'sharper', 'fit', 'shape', 'draw', 'sharper', 'fit', 'shape', 'lot', 'better', 'right', 'lot', 'better', 'right', 'lot', 'better', 'right', 'right', 'right', 'right', 'call', 'call', 'call', 'logistic', 'regression', 'basically', 'logistic', 'regression', 'basically', 'logistic', 'regression', 'basically', 'trying', 'fit', 'data', 'trying', 'fit', 'data', 'trying', 'fit', 'data', 'sigmoid', 'function', 'sigmoid', 'function', 'sigmoid', 'function', 'okay', 'okay', 'okay', 'know', 'one', 'know', 'one', 'know', 'one', 'data', 'point', 'one', 'data', 'point', 'one', 'data', 'point', 'one', 'feature', 'thats', 'call', 'feature', 'thats', 'call', 'feature', 'thats', 'call', 'simple', 'simple', 'simple', 'logistic', 'regression', 'logistic', 'regression', 'logistic', 'regression', 'know', 'thats', 'know', 'thats', 'know', 'thats', 'way', 'way', 'way', 'call', 'multiple', 'call', 'multiple', 'call', 'multiple', 'logistic', 'regression', 'logistic', 'regression', 'logistic', 'regression', 'multiple', 'feature', 'considering', 'multiple', 'feature', 'considering', 'multiple', 'feature', 'considering', 'building', 'model', 'building', 'model', 'building', 'model', 'logistic', 'regression', 'logistic', 'regression', 'logistic', 'regression', 'going', 'put', 'going', 'put', 'going', 'put', 'sklearn', 'sklearn', 'sklearn', 'linear', 'model', 'import', 'logistic', 'linear', 'model', 'import', 'logistic', 'linear', 'model', 'import', 'logistic', 'regression', 'regression', 'regression', 'right', 'right', 'right', 'like', 'like', 'like', 'repeat', 'instead', 'repeat', 'instead', 'repeat', 'instead', 'going', 'call', 'going', 'call', 'going', 'call', 'log', 'model', 'logistic', 'regression', 'log', 'model', 'logistic', 'regression', 'log', 'model', 'logistic', 'regression', 'going', 'change', 'logistic', 'going', 'change', 'logistic', 'going', 'change', 'logistic', 'regression', 'regression', 'regression', 'going', 'use', 'default', 'going', 'use', 'default', 'going', 'use', 'default', 'logistic', 'regression', 'logistic', 'regression', 'logistic', 'regression', 'actually', 'look', 'see', 'actually', 'look', 'see', 'actually', 'look', 'see', 'use', 'different', 'penalty', 'use', 'different', 'penalty', 'use', 'different', 'penalty', 'right', 'using', 'right', 'using', 'right', 'using', 'penalty', 'penalty', 'penalty', 'quadratic', 'formula', 'okay', 'quadratic', 'formula', 'okay', 'quadratic', 'formula', 'okay', 'mean', 'know', 'outlier', 'mean', 'know', 'outlier', 'mean', 'know', 'outlier', 'would', 'really', 'would', 'really', 'would', 'really', 'penalize', 'penalize', 'penalize', 'thing', 'know', 'thing', 'know', 'thing', 'know', 'toggle', 'toggle', 'toggle', 'different', 'parameter', 'might', 'get', 'different', 'parameter', 'might', 'get', 'different', 'parameter', 'might', 'get', 'slightly', 'different', 'result', 'slightly', 'different', 'result', 'slightly', 'different', 'result', 'building', 'production', 'level', 'logistic', 'building', 'production', 'level', 'logistic', 'building', 'production', 'level', 'logistic', 'regression', 'model', 'would', 'want', 'regression', 'model', 'would', 'want', 'regression', 'model', 'would', 'want', 'would', 'want', 'figure', 'know', 'would', 'want', 'figure', 'know', 'would', 'want', 'figure', 'know', 'best', 'best', 'best', 'parameter', 'pas', 'based', 'parameter', 'pas', 'based', 'parameter', 'pas', 'based', 'validation', 'data', 'validation', 'data', 'validation', 'data', 'well', 'well', 'use', 'well', 'well', 'use', 'well', 'well', 'use', 'box', 'box', 'box', 'going', 'fix', 'going', 'fix', 'going', 'fix', 'train', 'train', 'train', 'train', 'train', 'train', 'going', 'predict', 'going', 'predict', 'going', 'predict', 'call', 'call', 'call', 'instead', 'going', 'instead', 'going', 'instead', 'going', 'use', 'decent', 'precision', 'use', 'decent', 'precision', 'use', 'decent', 'precision', 'recall', 'recall', 'recall', 'total', 'accuracy', 'okay', 'total', 'accuracy', 'okay', 'total', 'accuracy', 'okay', 'performs', 'slightly', 'better', 'night', 'bass', 'performs', 'slightly', 'better', 'night', 'bass', 'performs', 'slightly', 'better', 'night', 'bass', 'still', 'good', 'knn', 'still', 'good', 'knn', 'still', 'good', 'knn', 'right', 'last', 'model', 'right', 'last', 'model', 'right', 'last', 'model', 'classification', 'wanted', 'talk', 'classification', 'wanted', 'talk', 'classification', 'wanted', 'talk', 'something', 'called', 'something', 'called', 'something', 'called', 'support', 'vector', 'machine', 'support', 'vector', 'machine', 'support', 'vector', 'machine', 'svms', 'short', 'svms', 'short', 'svms', 'short', 'exactly', 'exactly', 'exactly', 'svm', 'svm', 'svm', 'model', 'two', 'different', 'feature', 'model', 'two', 'different', 'feature', 'model', 'two', 'different', 'feature', 'axis', 'axis', 'axis', 'ive', 'told', 'know', 'ive', 'told', 'know', 'ive', 'told', 'know', 'class', 'class', 'based', 'blue', 'class', 'class', 'based', 'blue', 'class', 'class', 'based', 'blue', 'red', 'red', 'red', 'label', 'label', 'label', 'goal', 'find', 'sort', 'goal', 'find', 'sort', 'goal', 'find', 'sort', 'line', 'line', 'line', 'two', 'label', 'best', 'two', 'label', 'best', 'two', 'label', 'best', 'divide', 'data', 'divide', 'data', 'divide', 'data', 'right', 'line', 'svm', 'model', 'right', 'line', 'svm', 'model', 'right', 'line', 'svm', 'model', 'call', 'line', 'call', 'line', 'call', 'line', 'line', 'would', 'line', 'would', 'line', 'would', 'plane', 'also', 'plane', 'also', 'plane', 'also', 'dimension', 'proper', 'term', 'dimension', 'proper', 'term', 'dimension', 'proper', 'term', 'actually', 'want', 'find', 'actually', 'want', 'find', 'actually', 'want', 'find', 'hyperplane', 'hyperplane', 'hyperplane', 'best', 'differentiates', 'two', 'best', 'differentiates', 'two', 'best', 'differentiates', 'two', 'class', 'class', 'class', 'let', 'let', 'let', 'see', 'example', 'okay', 'see', 'example', 'okay', 'see', 'example', 'okay', 'first', 'first', 'first', 'three', 'three', 'three', 'line', 'let', 'say', 'let', 'say', 'one', 'best', 'divider', 'one', 'best', 'divider', 'one', 'best', 'divider', 'data', 'one', 'know', 'data', 'data', 'one', 'know', 'data', 'data', 'one', 'know', 'data', 'one', 'side', 'least', 'one', 'side', 'least', 'one', 'side', 'least', 'doesnt', 'one', 'divide', 'doesnt', 'one', 'divide', 'doesnt', 'one', 'divide', 'right', 'like', 'one', 'right', 'like', 'one', 'right', 'like', 'one', 'defined', 'boundary', 'two', 'defined', 'boundary', 'two', 'defined', 'boundary', 'two', 'different', 'group', 'question', 'pretty', 'question', 'pretty', 'question', 'pretty', 'straightforward', 'straightforward', 'straightforward', 'right', 'clear', 'distinct', 'right', 'clear', 'distinct', 'right', 'clear', 'distinct', 'line', 'line', 'line', 'know', 'everything', 'know', 'everything', 'know', 'everything', 'side', 'one', 'label', 'side', 'one', 'label', 'side', 'one', 'label', 'negative', 'everything', 'side', 'negative', 'everything', 'side', 'negative', 'everything', 'side', 'label', 'positive', 'drawn', 'like', 'like', 'maybe', 'like', 'maybe', 'like', 'maybe', 'like', 'sorry', 'theyre', 'kind', 'label', 'sorry', 'theyre', 'kind', 'label', 'sorry', 'theyre', 'kind', 'label', 'kind', 'close', 'together', 'kind', 'close', 'together', 'kind', 'close', 'together', 'one', 'best', 'would', 'argue', 'still', 'would', 'argue', 'still', 'right', 'still', 'right', 'still', 'right', 'still', 'two', 'two', 'two', 'look', 'close', 'look', 'close', 'look', 'close', 'point', 'right', 'new', 'point', 'right', 'new', 'point', 'wanted', 'estimate', 'okay', 'say', 'wanted', 'estimate', 'okay', 'say', 'wanted', 'estimate', 'okay', 'say', 'didnt', 'didnt', 'didnt', 'let', 'say', 'working', 'let', 'say', 'working', 'let', 'say', 'working', 'let', 'say', 'new', 'point', 'thats', 'let', 'say', 'new', 'point', 'thats', 'let', 'say', 'new', 'point', 'thats', 'right', 'right', 'right', 'maybe', 'new', 'point', 'thats', 'right', 'maybe', 'new', 'point', 'thats', 'right', 'maybe', 'new', 'point', 'thats', 'right', 'well', 'seems', 'like', 'logically', 'well', 'seems', 'like', 'logically', 'well', 'seems', 'like', 'logically', 'looking', 'mean', 'without', 'looking', 'mean', 'without', 'looking', 'mean', 'without', 'boundary', 'boundary', 'boundary', 'would', 'probably', 'positive', 'would', 'probably', 'positive', 'would', 'probably', 'positive', 'right', 'right', 'right', 'mean', 'pretty', 'close', 'mean', 'pretty', 'close', 'mean', 'pretty', 'close', 'positive', 'positive', 'positive', 'one', 'thing', 'care', 'svms', 'one', 'thing', 'care', 'svms', 'one', 'thing', 'care', 'svms', 'something', 'known', 'margin', 'something', 'known', 'margin', 'something', 'known', 'margin', 'okay', 'okay', 'okay', 'want', 'separate', 'two', 'want', 'separate', 'two', 'want', 'separate', 'two', 'class', 'really', 'well', 'also', 'care', 'class', 'really', 'well', 'also', 'care', 'class', 'really', 'well', 'also', 'care', 'boundary', 'boundary', 'boundary', 'point', 'class', 'point', 'class', 'point', 'class', 'data', 'set', 'data', 'set', 'data', 'set', 'line', 'drawing', 'line', 'drawing', 'line', 'drawing', 'line', 'like', 'line', 'like', 'line', 'like', 'closest', 'value', 'line', 'closest', 'value', 'line', 'closest', 'value', 'line', 'might', 'might', 'might', 'like', 'right', 'effectively', 'right', 'effectively', 'switch', 'dotted', 'line', 'effectively', 'whats', 'known', 'effectively', 'whats', 'known', 'margin', 'okay', 'okay', 'margin', 'margin', 'margin', 'svms', 'svms', 'svms', 'goal', 'maximize', 'goal', 'maximize', 'goal', 'maximize', 'margin', 'want', 'line', 'margin', 'want', 'line', 'margin', 'want', 'line', 'best', 'separate', 'two', 'different', 'best', 'separate', 'two', 'different', 'best', 'separate', 'two', 'different', 'class', 'want', 'line', 'class', 'want', 'line', 'class', 'want', 'line', 'largest', 'margin', 'largest', 'margin', 'largest', 'margin', 'data', 'point', 'lie', 'data', 'point', 'lie', 'data', 'point', 'lie', 'margin', 'line', 'data', 'basically', 'margin', 'line', 'data', 'basically', 'margin', 'line', 'data', 'basically', 'data', 'point', 'thats', 'helping', 'data', 'point', 'thats', 'helping', 'data', 'point', 'thats', 'helping', 'define', 'divider', 'define', 'divider', 'define', 'divider', 'call', 'support', 'call', 'support', 'call', 'support', 'vector', 'hence', 'name', 'support', 'vector', 'machine', 'hence', 'name', 'support', 'vector', 'machine', 'okay', 'issue', 'svm', 'sometimes', 'okay', 'issue', 'svm', 'sometimes', 'okay', 'issue', 'svm', 'sometimes', 'theyre', 'robust', 'theyre', 'robust', 'theyre', 'robust', 'outlier', 'outlier', 'outlier', 'right', 'example', 'right', 'example', 'right', 'example', 'one', 'outlier', 'one', 'outlier', 'one', 'outlier', 'like', 'like', 'like', 'would', 'totally', 'change', 'want', 'would', 'totally', 'change', 'want', 'would', 'totally', 'change', 'want', 'support', 'vector', 'support', 'vector', 'support', 'vector', 'even', 'though', 'might', 'even', 'though', 'might', 'even', 'though', 'might', 'outlier', 'okay', 'outlier', 'okay', 'outlier', 'okay', 'thats', 'something', 'keep', 'mind', 'thats', 'something', 'keep', 'mind', 'thats', 'something', 'keep', 'mind', 'know', 'youre', 'working', 'svms', 'know', 'youre', 'working', 'svms', 'know', 'youre', 'working', 'svms', 'might', 'best', 'model', 'might', 'best', 'model', 'might', 'best', 'model', 'outlier', 'data', 'set', 'outlier', 'data', 'set', 'outlier', 'data', 'set', 'okay', 'another', 'example', 'svms', 'okay', 'another', 'example', 'svms', 'okay', 'another', 'example', 'svms', 'might', 'let', 'say', 'data', 'might', 'let', 'say', 'data', 'might', 'let', 'say', 'data', 'like', 'going', 'use', 'one', 'like', 'going', 'use', 'one', 'like', 'going', 'use', 'one', 'dimensional', 'data', 'set', 'example', 'dimensional', 'data', 'set', 'example', 'dimensional', 'data', 'set', 'example', 'let', 'say', 'data', 'set', 'look', 'let', 'say', 'data', 'set', 'look', 'let', 'say', 'data', 'set', 'look', 'like', 'like', 'like', 'well', 'know', 'separator', 'well', 'know', 'separator', 'well', 'know', 'separator', 'perpendicular', 'line', 'perpendicular', 'line', 'perpendicular', 'line', 'somewhere', 'along', 'somewhere', 'along', 'somewhere', 'along', 'line', 'could', 'line', 'could', 'line', 'could', 'anywhere', 'like', 'anywhere', 'like', 'anywhere', 'like', 'might', 'argue', 'okay', 'well', 'there', 'one', 'might', 'argue', 'okay', 'well', 'there', 'one', 'might', 'argue', 'okay', 'well', 'there', 'one', 'could', 'also', 'draw', 'could', 'also', 'draw', 'could', 'also', 'draw', 'another', 'one', 'another', 'one', 'another', 'one', 'right', 'maybe', 'two', 'right', 'maybe', 'two', 'right', 'maybe', 'two', 'svms', 'thats', 'really', 'svms', 'work', 'svms', 'thats', 'really', 'svms', 'work', 'svms', 'thats', 'really', 'svms', 'work', 'one', 'thing', 'one', 'thing', 'one', 'thing', 'create', 'sort', 'projection', 'create', 'sort', 'projection', 'create', 'sort', 'projection', 'realized', 'one', 'thing', 'realized', 'one', 'thing', 'realized', 'one', 'thing', 'forgot', 'forgot', 'forgot', 'label', 'zero', 'let', 'label', 'zero', 'let', 'label', 'zero', 'let', 'say', 'zero', 'say', 'zero', 'say', 'zero', 'going', 'going', 'going', 'going', 'say', 'okay', 'say', 'okay', 'say', 'okay', 'going', 'going', 'going', 'going', 'going', 'going', 'sorry', 'going', 'sorry', 'going', 'sorry', 'going', 'original', 'original', 'original', 'going', 'make', 'equal', 'going', 'make', 'equal', 'going', 'make', 'equal', 'let', 'say', 'let', 'say', 'let', 'say', 'squared', 'whatever', 'squared', 'squared', 'whatever', 'squared', 'squared', 'whatever', 'squared', 'right', 'right', 'right', 'negative', 'would', 'know', 'maybe', 'negative', 'would', 'know', 'maybe', 'negative', 'would', 'know', 'maybe', 'somewhere', 'somewhere', 'somewhere', 'pretend', 'somewhere', 'pretend', 'somewhere', 'pretend', 'somewhere', 'right', 'plus', 'might', 'right', 'plus', 'might', 'right', 'plus', 'might', 'something', 'like', 'going', 'run', 'space', 'going', 'run', 'space', 'going', 'run', 'space', 'going', 'draw', 'going', 'draw', 'going', 'draw', 'together', 'use', 'imagination', 'well', 'lot', 'easier', 'apply', 'well', 'lot', 'easier', 'apply', 'boundary', 'right', 'svm', 'could', 'boundary', 'right', 'svm', 'could', 'boundary', 'right', 'svm', 'could', 'maybe', 'something', 'like', 'maybe', 'something', 'like', 'maybe', 'something', 'like', 'see', 'weve', 'divided', 'see', 'weve', 'divided', 'data', 'set', 'separable', 'one', 'data', 'set', 'separable', 'one', 'data', 'set', 'separable', 'one', 'class', 'way', 'class', 'way', 'class', 'way', 'class', 'class', 'class', 'way', 'way', 'way', 'okay', 'thats', 'known', 'svms', 'okay', 'thats', 'known', 'svms', 'okay', 'thats', 'known', 'svms', 'highly', 'suggest', 'know', 'highly', 'suggest', 'know', 'highly', 'suggest', 'know', 'model', 'mentioned', 'model', 'mentioned', 'model', 'mentioned', 'youre', 'interested', 'youre', 'interested', 'youre', 'interested', 'depth', 'mathematically', 'like', 'depth', 'mathematically', 'like', 'depth', 'mathematically', 'like', 'find', 'hyperplane', 'find', 'hyperplane', 'find', 'hyperplane', 'right', 'going', 'right', 'going', 'right', 'going', 'specific', 'course', 'youre', 'specific', 'course', 'youre', 'specific', 'course', 'youre', 'learning', 'svm', 'learning', 'svm', 'learning', 'svm', 'good', 'idea', 'know', 'okay', 'good', 'idea', 'know', 'okay', 'good', 'idea', 'know', 'okay', 'technique', 'behind', 'finding', 'technique', 'behind', 'finding', 'technique', 'behind', 'finding', 'know', 'exactly', 'know', 'exactly', 'know', 'exactly', 'define', 'hyperplane', 'define', 'hyperplane', 'define', 'hyperplane', 'going', 'use', 'going', 'use', 'going', 'use', 'anyways', 'transformation', 'anyways', 'transformation', 'anyways', 'transformation', 'known', 'kernel', 'trick', 'coordinate', 'coordinate', 'squared', 'squared', 'squared', 'applying', 'applying', 'applying', 'kernel', 'thats', 'called', 'kernel', 'thats', 'called', 'kernel', 'thats', 'called', 'kernel', 'trick', 'kernel', 'trick', 'kernel', 'trick', 'svms', 'actually', 'really', 'powerful', 'svms', 'actually', 'really', 'powerful', 'svms', 'actually', 'really', 'powerful', 'youll', 'see', 'youll', 'see', 'youll', 'see', 'sklearnsvm', 'going', 'import', 'sklearnsvm', 'going', 'import', 'sklearnsvm', 'going', 'import', 'svc', 'svc', 'support', 'vector', 'svc', 'svc', 'support', 'vector', 'svc', 'svc', 'support', 'vector', 'classifier', 'classifier', 'classifier', 'sbm', 'model', 'sbm', 'model', 'sbm', 'model', 'going', 'know', 'create', 'svc', 'going', 'know', 'create', 'svc', 'going', 'know', 'create', 'svc', 'model', 'model', 'model', 'going', 'going', 'going', 'fit', 'train', 'could', 'fit', 'train', 'could', 'fit', 'train', 'could', 'copy', 'pasted', 'copy', 'pasted', 'copy', 'pasted', 'probably', 'done', 'okay', 'okay', 'taking', 'bit', 'longer', 'taking', 'bit', 'longer', 'taking', 'bit', 'longer', 'right', 'let', 'predict', 'using', 'svm', 'model', 'let', 'predict', 'using', 'svm', 'model', 'let', 'see', 'hover', 'let', 'see', 'hover', 'let', 'see', 'hover', 'right', 'see', 'lot', 'right', 'see', 'lot', 'right', 'see', 'lot', 'different', 'parameter', 'different', 'parameter', 'different', 'parameter', 'back', 'change', 'back', 'change', 'back', 'change', 'creating', 'production', 'level', 'model', 'creating', 'production', 'level', 'model', 'creating', 'production', 'level', 'model', 'okay', 'okay', 'okay', 'specific', 'case', 'specific', 'case', 'specific', 'case', 'well', 'use', 'box', 'well', 'use', 'box', 'well', 'use', 'box', 'make', 'prediction', 'youll', 'note', 'make', 'prediction', 'youll', 'note', 'make', 'prediction', 'youll', 'note', 'wow', 'accuracy', 'actually', 'jump', 'wow', 'accuracy', 'actually', 'jump', 'wow', 'accuracy', 'actually', 'jump', 'svm', 'svm', 'svm', 'even', 'class', 'there', 'nothing', 'even', 'class', 'there', 'nothing', 'even', 'class', 'there', 'nothing', 'less', 'know', 'great', 'less', 'know', 'great', 'less', 'know', 'great', 'class', 'one', 'mean', 'everythings', 'class', 'one', 'mean', 'everythings', 'class', 'one', 'mean', 'everythings', 'higher', 'anything', 'higher', 'anything', 'higher', 'anything', 'seen', 'point', 'far', 'weve', 'gone', 'four', 'different', 'far', 'weve', 'gone', 'four', 'different', 'classification', 'model', 'weve', 'done', 'svms', 'classification', 'model', 'weve', 'done', 'svms', 'classification', 'model', 'weve', 'done', 'svms', 'logistic', 'regression', 'naive', 'bayes', 'logistic', 'regression', 'naive', 'bayes', 'logistic', 'regression', 'naive', 'bayes', 'simple', 'way', 'simple', 'way', 'simple', 'way', 'implement', 'implement', 'implement', 'different', 'know', 'different', 'know', 'different', 'know', 'different', 'hyper', 'parameter', 'different', 'hyper', 'parameter', 'different', 'hyper', 'parameter', 'toggle', 'toggle', 'toggle', 'try', 'see', 'try', 'see', 'try', 'see', 'help', 'later', 'help', 'later', 'help', 'later', 'part', 'perform', 'part', 'perform', 'part', 'perform', 'give', 'around', 'percent', 'give', 'around', 'percent', 'give', 'around', 'percent', 'accuracy', 'accuracy', 'accuracy', 'okay', 'svm', 'best', 'let', 'okay', 'svm', 'best', 'let', 'okay', 'svm', 'best', 'let', 'see', 'actually', 'beat', 'using', 'see', 'actually', 'beat', 'using', 'see', 'actually', 'beat', 'using', 'neural', 'net', 'final', 'type', 'model', 'neural', 'net', 'final', 'type', 'model', 'neural', 'net', 'final', 'type', 'model', 'wanted', 'talk', 'known', 'wanted', 'talk', 'known', 'wanted', 'talk', 'known', 'neural', 'net', 'neural', 'network', 'neural', 'net', 'neural', 'network', 'neural', 'net', 'neural', 'network', 'neural', 'net', 'look', 'something', 'like', 'neural', 'net', 'look', 'something', 'like', 'neural', 'net', 'look', 'something', 'like', 'input', 'layer', 'input', 'layer', 'input', 'layer', 'feature', 'would', 'feature', 'would', 'feature', 'would', 'arrow', 'pointing', 'arrow', 'pointing', 'arrow', 'pointing', 'sort', 'hidden', 'layer', 'sort', 'hidden', 'layer', 'sort', 'hidden', 'layer', 'arrow', 'point', 'arrow', 'point', 'arrow', 'point', 'sort', 'output', 'layer', 'sort', 'output', 'layer', 'sort', 'output', 'layer', 'mean', 'mean', 'mean', 'layer', 'layer', 'layer', 'something', 'known', 'neuron', 'something', 'known', 'neuron', 'something', 'known', 'neuron', 'okay', 'thats', 'neuron', 'okay', 'thats', 'neuron', 'okay', 'thats', 'neuron', 'neural', 'net', 'neural', 'net', 'neural', 'net', 'feature', 'feature', 'feature', 'inputting', 'neural', 'net', 'inputting', 'neural', 'net', 'inputting', 'neural', 'net', 'might', 'way', 'might', 'way', 'might', 'way', 'right', 'feature', 'right', 'feature', 'right', 'feature', 'talked', 'might', 'talked', 'might', 'talked', 'might', 'know', 'pregnancy', 'bmi', 'know', 'pregnancy', 'bmi', 'know', 'pregnancy', 'bmi', 'age', 'etc', 'age', 'etc', 'age', 'etc', 'get', 'weighted', 'get', 'weighted', 'get', 'weighted', 'value', 'value', 'value', 'get', 'multiplied', 'number', 'get', 'multiplied', 'number', 'get', 'multiplied', 'number', 'applies', 'one', 'specific', 'applies', 'one', 'specific', 'applies', 'one', 'specific', 'category', 'one', 'specific', 'feature', 'category', 'one', 'specific', 'feature', 'category', 'one', 'specific', 'feature', 'two', 'get', 'multiplied', 'two', 'get', 'multiplied', 'two', 'get', 'multiplied', 'sum', 'go', 'sum', 'go', 'sum', 'go', 'neuron', 'neuron', 'neuron', 'okay', 'basically', 'taking', 'time', 'okay', 'basically', 'taking', 'time', 'okay', 'basically', 'taking', 'time', 'adding', 'time', 'adding', 'time', 'adding', 'time', 'adding', 'know', 'time', 'etc', 'adding', 'know', 'time', 'etc', 'adding', 'know', 'time', 'etc', 'way', 'time', 'way', 'time', 'way', 'time', 'thats', 'getting', 'thats', 'getting', 'thats', 'getting', 'input', 'neuron', 'input', 'neuron', 'input', 'neuron', 'also', 'adding', 'bias', 'term', 'also', 'adding', 'bias', 'term', 'also', 'adding', 'bias', 'term', 'mean', 'okay', 'might', 'want', 'shift', 'mean', 'okay', 'might', 'want', 'shift', 'mean', 'okay', 'might', 'want', 'shift', 'little', 'bit', 'might', 'add', 'little', 'bit', 'might', 'add', 'little', 'bit', 'might', 'add', 'might', 'add', 'might', 'subtract', 'might', 'add', 'might', 'subtract', 'might', 'add', 'might', 'subtract', 'dont', 'know', 'going', 'add', 'dont', 'know', 'going', 'add', 'dont', 'know', 'going', 'add', 'bias', 'term', 'bias', 'term', 'bias', 'term', 'output', 'thing', 'output', 'thing', 'output', 'thing', 'sum', 'sum', 'sum', 'something', 'known', 'activation', 'something', 'known', 'activation', 'something', 'known', 'activation', 'function', 'okay', 'function', 'okay', 'function', 'okay', 'applying', 'activation', 'applying', 'activation', 'applying', 'activation', 'function', 'get', 'output', 'function', 'get', 'output', 'function', 'get', 'output', 'neuron', 'would', 'look', 'neuron', 'would', 'look', 'neuron', 'would', 'look', 'like', 'like', 'like', 'whole', 'network', 'would', 'look', 'whole', 'network', 'would', 'look', 'whole', 'network', 'would', 'look', 'something', 'like', 'something', 'like', 'something', 'like', 'kind', 'gloss', 'kind', 'gloss', 'kind', 'gloss', 'activation', 'function', 'activation', 'function', 'activation', 'function', 'exactly', 'exactly', 'exactly', 'neural', 'net', 'look', 'like', 'neural', 'net', 'look', 'like', 'neural', 'net', 'look', 'like', 'input', 'let', 'input', 'let', 'input', 'let', 'say', 'arrow', 'represent', 'say', 'arrow', 'represent', 'say', 'arrow', 'represent', 'sort', 'addition', 'sort', 'addition', 'sort', 'addition', 'right', 'right', 'right', 'whats', 'going', 'whats', 'going', 'whats', 'going', 'adding', 'bunch', 'time', 'adding', 'bunch', 'time', 'adding', 'bunch', 'time', 'right', 'adding', 'sort', 'right', 'adding', 'sort', 'right', 'adding', 'sort', 'weight', 'time', 'input', 'layer', 'weight', 'time', 'input', 'layer', 'weight', 'time', 'input', 'layer', 'bunch', 'time', 'bunch', 'time', 'bunch', 'time', 'back', 'factor', 'back', 'factor', 'back', 'factor', 'entire', 'neural', 'net', 'entire', 'neural', 'net', 'entire', 'neural', 'net', 'linear', 'combination', 'linear', 'combination', 'linear', 'combination', 'input', 'layer', 'input', 'layer', 'input', 'layer', 'dont', 'know', 'dont', 'know', 'dont', 'know', 'seems', 'kind', 'useless', 'right', 'seems', 'kind', 'useless', 'right', 'seems', 'kind', 'useless', 'right', 'could', 'literally', 'write', 'could', 'literally', 'write', 'could', 'literally', 'write', 'formula', 'would', 'need', 'set', 'formula', 'would', 'need', 'set', 'formula', 'would', 'need', 'set', 'entire', 'neural', 'network', 'entire', 'neural', 'network', 'entire', 'neural', 'network', 'wouldnt', 'wouldnt', 'wouldnt', 'activation', 'function', 'introduced', 'activation', 'function', 'introduced', 'activation', 'function', 'introduced', 'right', 'without', 'activation', 'function', 'right', 'without', 'activation', 'function', 'right', 'without', 'activation', 'function', 'becomes', 'linear', 'model', 'becomes', 'linear', 'model', 'becomes', 'linear', 'model', 'activation', 'function', 'might', 'look', 'activation', 'function', 'might', 'look', 'activation', 'function', 'might', 'look', 'something', 'like', 'tell', 'something', 'like', 'tell', 'something', 'like', 'tell', 'linear', 'reason', 'linear', 'reason', 'linear', 'reason', 'introduce', 'introduce', 'introduce', 'entire', 'model', 'doesnt', 'entire', 'model', 'doesnt', 'entire', 'model', 'doesnt', 'collapse', 'become', 'linear', 'collapse', 'become', 'linear', 'collapse', 'become', 'linear', 'model', 'model', 'model', 'something', 'known', 'something', 'known', 'something', 'known', 'sigmoid', 'function', 'run', 'zero', 'sigmoid', 'function', 'run', 'zero', 'sigmoid', 'function', 'run', 'zero', 'one', 'one', 'one', 'tan', 'run', 'negative', 'one', 'tan', 'run', 'negative', 'one', 'tan', 'run', 'negative', 'one', 'way', 'one', 'way', 'one', 'way', 'one', 'relu', 'anything', 'less', 'relu', 'anything', 'less', 'relu', 'anything', 'less', 'zero', 'zero', 'anything', 'zero', 'zero', 'anything', 'zero', 'zero', 'anything', 'greater', 'zero', 'linear', 'greater', 'zero', 'linear', 'greater', 'zero', 'linear', 'activation', 'function', 'activation', 'function', 'activation', 'function', 'every', 'single', 'output', 'neuron', 'every', 'single', 'output', 'neuron', 'every', 'single', 'output', 'neuron', 'longer', 'linear', 'combination', 'longer', 'linear', 'combination', 'longer', 'linear', 'combination', 'sort', 'altered', 'sort', 'altered', 'sort', 'altered', 'linear', 'state', 'mean', 'input', 'linear', 'state', 'mean', 'input', 'linear', 'state', 'mean', 'input', 'next', 'neuron', 'next', 'neuron', 'next', 'neuron', 'know', 'know', 'know', 'doesnt', 'doesnt', 'collapse', 'doesnt', 'doesnt', 'collapse', 'doesnt', 'doesnt', 'collapse', 'doesnt', 'become', 'linear', 'weve', 'doesnt', 'become', 'linear', 'weve', 'doesnt', 'become', 'linear', 'weve', 'introduced', 'nonlinearities', 'introduced', 'nonlinearities', 'introduced', 'nonlinearities', 'training', 'set', 'model', 'training', 'set', 'model', 'training', 'set', 'model', 'loss', 'right', 'thing', 'loss', 'right', 'thing', 'loss', 'right', 'thing', 'called', 'training', 'feed', 'called', 'training', 'feed', 'called', 'training', 'feed', 'loss', 'back', 'model', 'loss', 'back', 'model', 'loss', 'back', 'model', 'make', 'certain', 'adjustment', 'model', 'make', 'certain', 'adjustment', 'model', 'make', 'certain', 'adjustment', 'model', 'improve', 'improve', 'improve', 'predicted', 'output', 'predicted', 'output', 'predicted', 'output', 'let', 'talk', 'little', 'bit', 'let', 'talk', 'little', 'bit', 'let', 'talk', 'little', 'bit', 'training', 'exactly', 'go', 'training', 'exactly', 'go', 'training', 'exactly', 'go', 'step', 'step', 'step', 'let', 'back', 'take', 'look', 'let', 'back', 'take', 'look', 'let', 'back', 'take', 'look', 'loss', 'function', 'loss', 'function', 'loss', 'function', 'loss', 'function', 'look', 'loss', 'function', 'look', 'loss', 'function', 'look', 'like', 'quadratic', 'formula', 'right', 'like', 'quadratic', 'formula', 'right', 'like', 'quadratic', 'formula', 'right', 'well', 'error', 'really', 'really', 'well', 'error', 'really', 'really', 'well', 'error', 'really', 'really', 'really', 'really', 'large', 'really', 'really', 'large', 'really', 'really', 'large', 'goal', 'get', 'somewhere', 'goal', 'get', 'somewhere', 'goal', 'get', 'somewhere', 'loss', 'decreased', 'right', 'loss', 'decreased', 'right', 'loss', 'decreased', 'right', 'mean', 'predicted', 'mean', 'predicted', 'mean', 'predicted', 'value', 'closer', 'true', 'value', 'value', 'closer', 'true', 'value', 'value', 'closer', 'true', 'value', 'mean', 'want', 'mean', 'want', 'mean', 'want', 'way', 'way', 'way', 'okay', 'okay', 'okay', 'thanks', 'lot', 'property', 'thanks', 'lot', 'property', 'thanks', 'lot', 'property', 'math', 'something', 'called', 'math', 'something', 'called', 'math', 'something', 'called', 'gradient', 'descent', 'gradient', 'descent', 'gradient', 'descent', 'order', 'follow', 'order', 'follow', 'order', 'follow', 'slope', 'slope', 'slope', 'way', 'way', 'way', 'quadratic', 'quadratic', 'quadratic', 'different', 'different', 'different', 'slope', 'respect', 'value', 'slope', 'respect', 'value', 'slope', 'respect', 'value', 'okay', 'okay', 'okay', 'loss', 'respect', 'weight', 'loss', 'respect', 'weight', 'loss', 'respect', 'weight', 'versus', 'versus', 'versus', 'versus', 'versus', 'versus', 'might', 'different', 'might', 'different', 'might', 'different', 'right', 'right', 'right', 'way', 'kind', 'think', 'way', 'kind', 'think', 'way', 'kind', 'think', 'extent', 'value', 'extent', 'value', 'extent', 'value', 'contributing', 'loss', 'contributing', 'loss', 'contributing', 'loss', 'actually', 'figure', 'actually', 'figure', 'actually', 'figure', 'calculus', 'going', 'touch', 'calculus', 'going', 'touch', 'calculus', 'going', 'touch', 'specific', 'course', 'specific', 'course', 'specific', 'course', 'want', 'learn', 'neural', 'want', 'learn', 'neural', 'want', 'learn', 'neural', 'net', 'probably', 'also', 'learn', 'net', 'probably', 'also', 'learn', 'net', 'probably', 'also', 'learn', 'calculus', 'figure', 'exactly', 'calculus', 'figure', 'exactly', 'calculus', 'figure', 'exactly', 'backpropagation', 'order', 'backpropagation', 'order', 'backpropagation', 'order', 'actually', 'calculate', 'know', 'much', 'actually', 'calculate', 'know', 'much', 'actually', 'calculate', 'know', 'much', 'backstep', 'backstep', 'backstep', 'thing', 'might', 'notice', 'thing', 'might', 'notice', 'thing', 'might', 'notice', 'follows', 'curve', 'follows', 'curve', 'follows', 'curve', 'different', 'point', 'closer', 'different', 'point', 'closer', 'different', 'point', 'closer', 'get', 'bottom', 'smaller', 'step', 'get', 'bottom', 'smaller', 'step', 'get', 'bottom', 'smaller', 'step', 'becomes', 'becomes', 'becomes', 'stick', 'stick', 'stick', 'new', 'value', 'call', 'new', 'value', 'call', 'new', 'value', 'call', 'weight', 'update', 'going', 'take', 'weight', 'update', 'going', 'take', 'weight', 'update', 'going', 'take', 'going', 'set', 'new', 'value', 'going', 'set', 'new', 'value', 'going', 'set', 'new', 'value', 'going', 'set', 'going', 'set', 'going', 'set', 'old', 'value', 'old', 'value', 'old', 'value', 'plus', 'plus', 'plus', 'factor', 'ill', 'call', 'alpha', 'factor', 'ill', 'call', 'alpha', 'factor', 'ill', 'call', 'alpha', 'time', 'time', 'time', 'whatever', 'arrow', 'thats', 'whatever', 'arrow', 'thats', 'whatever', 'arrow', 'thats', 'basically', 'saying', 'okay', 'take', 'old', 'basically', 'saying', 'okay', 'take', 'old', 'basically', 'saying', 'okay', 'take', 'old', 'old', 'weight', 'old', 'weight', 'old', 'weight', 'decrease', 'decrease', 'decrease', 'way', 'guess', 'increase', 'way', 'guess', 'increase', 'way', 'guess', 'increase', 'direction', 'right', 'like', 'take', 'step', 'direction', 'right', 'like', 'take', 'step', 'direction', 'right', 'like', 'take', 'step', 'direction', 'alpha', 'telling', 'direction', 'alpha', 'telling', 'direction', 'alpha', 'telling', 'okay', 'dont', 'dont', 'take', 'huge', 'step', 'okay', 'dont', 'dont', 'take', 'huge', 'step', 'okay', 'dont', 'dont', 'take', 'huge', 'step', 'right', 'case', 'wrong', 'take', 'right', 'case', 'wrong', 'take', 'right', 'case', 'wrong', 'take', 'small', 'step', 'take', 'small', 'step', 'small', 'step', 'take', 'small', 'step', 'small', 'step', 'take', 'small', 'step', 'direction', 'see', 'get', 'closer', 'direction', 'see', 'get', 'closer', 'direction', 'see', 'get', 'closer', 'know', 'know', 'know', 'want', 'look', 'mathematics', 'want', 'look', 'mathematics', 'want', 'look', 'mathematics', 'thing', 'reason', 'use', 'plus', 'thing', 'reason', 'use', 'plus', 'thing', 'reason', 'use', 'plus', 'negative', 'gradient', 'right', 'negative', 'gradient', 'right', 'negative', 'gradient', 'right', 'use', 'use', 'use', 'actual', 'gradient', 'actual', 'gradient', 'actual', 'gradient', 'minus', 'alpha', 'something', 'call', 'alpha', 'something', 'call', 'learning', 'rate', 'learning', 'rate', 'learning', 'rate', 'okay', 'adjusts', 'quickly', 'okay', 'adjusts', 'quickly', 'okay', 'adjusts', 'quickly', 'taking', 'step', 'taking', 'step', 'taking', 'step', 'might', 'know', 'tell', 'might', 'know', 'tell', 'might', 'know', 'tell', 'ultimately', 'control', 'ultimately', 'control', 'ultimately', 'control', 'long', 'take', 'neural', 'net', 'long', 'take', 'neural', 'net', 'long', 'take', 'neural', 'net', 'converge', 'converge', 'converge', 'sometimes', 'set', 'high', 'sometimes', 'set', 'high', 'sometimes', 'set', 'high', 'might', 'even', 'diverge', 'might', 'even', 'diverge', 'might', 'even', 'diverge', 'weight', 'weight', 'weight', 'make', 'update', 'make', 'update', 'make', 'update', 'calculate', 'calculate', 'calculate', 'loss', 'loss', 'loss', 'gradient', 'loss', 'respect', 'gradient', 'loss', 'respect', 'gradient', 'loss', 'respect', 'weight', 'weight', 'weight', 'thats', 'backpropagation', 'work', 'thats', 'backpropagation', 'work', 'thats', 'backpropagation', 'work', 'everything', 'thats', 'going', 'everything', 'thats', 'going', 'everything', 'thats', 'going', 'calculate', 'loss', 'calculate', 'loss', 'calculate', 'loss', 'calculating', 'gradient', 'calculating', 'gradient', 'calculating', 'gradient', 'making', 'adjustment', 'model', 'making', 'adjustment', 'model', 'making', 'adjustment', 'model', 'setting', 'weight', 'setting', 'weight', 'setting', 'weight', 'something', 'adjusted', 'slightly', 'something', 'adjusted', 'slightly', 'something', 'adjusted', 'slightly', 'saying', 'okay', 'let', 'take', 'saying', 'okay', 'let', 'take', 'saying', 'okay', 'let', 'take', 'training', 'set', 'run', 'training', 'set', 'run', 'training', 'set', 'run', 'model', 'loop', 'model', 'loop', 'model', 'loop', 'machine', 'learning', 'machine', 'learning', 'machine', 'learning', 'already', 'seen', 'library', 'already', 'seen', 'library', 'already', 'seen', 'library', 'use', 'right', 'weve', 'already', 'seen', 'learn', 'use', 'right', 'weve', 'already', 'seen', 'learn', 'use', 'right', 'weve', 'already', 'seen', 'learn', 'start', 'going', 'neural', 'network', 'kind', 'trying', 'kind', 'trying', 'program', 'program', 'program', 'fun', 'fun', 'fun', 'try', 'program', 'scratch', 'try', 'program', 'scratch', 'try', 'program', 'scratch', 'probably', 'lot', 'probably', 'lot', 'probably', 'lot', 'bug', 'also', 'probably', 'going', 'bug', 'also', 'probably', 'going', 'bug', 'also', 'probably', 'going', 'fast', 'enough', 'fast', 'enough', 'fast', 'enough', 'right', 'right', 'right', 'wouldnt', 'great', 'wouldnt', 'great', 'wouldnt', 'great', 'know', 'know', 'know', 'fulltime', 'professional', 'fulltime', 'professional', 'fulltime', 'professional', 'dedicated', 'solving', 'problem', 'dedicated', 'solving', 'problem', 'dedicated', 'solving', 'problem', 'could', 'literally', 'give', 'could', 'literally', 'give', 'could', 'literally', 'give', 'code', 'thats', 'already', 'running', 'really', 'fast', 'code', 'thats', 'already', 'running', 'really', 'fast', 'code', 'thats', 'already', 'running', 'really', 'fast', 'well', 'answer', 'yes', 'exists', 'well', 'answer', 'yes', 'exists', 'well', 'answer', 'yes', 'exists', 'thats', 'use', 'tensorflow', 'thats', 'use', 'tensorflow', 'thats', 'use', 'tensorflow', 'tensorflow', 'make', 'really', 'easy', 'tensorflow', 'make', 'really', 'easy', 'tensorflow', 'make', 'really', 'easy', 'define', 'model', 'define', 'model', 'define', 'model', 'also', 'enough', 'control', 'also', 'enough', 'control', 'also', 'enough', 'control', 'exactly', 'feeding', 'exactly', 'feeding', 'exactly', 'feeding', 'model', 'model', 'model', 'example', 'line', 'example', 'line', 'example', 'line', 'basically', 'saying', 'okay', 'let', 'create', 'basically', 'saying', 'okay', 'let', 'create', 'basically', 'saying', 'okay', 'let', 'create', 'sequential', 'neural', 'net', 'sequential', 'neural', 'net', 'sequential', 'neural', 'net', 'sequential', 'know', 'sequential', 'know', 'sequential', 'know', 'weve', 'seen', 'go', 'one', 'layer', 'weve', 'seen', 'go', 'one', 'layer', 'weve', 'seen', 'go', 'one', 'layer', 'next', 'next', 'next', 'dense', 'layer', 'mean', 'dense', 'layer', 'mean', 'dense', 'layer', 'mean', 'interconnected', 'interconnected', 'interconnected', 'interconnected', 'node', 'interconnected', 'node', 'interconnected', 'node', 'one', 'one', 'one', 'one', 'get', 'connected', 'one', 'get', 'connected', 'one', 'get', 'connected', 'next', 'one', 'going', 'next', 'one', 'going', 'next', 'one', 'going', 'create', 'create', 'create', 'dense', 'node', 'dense', 'node', 'dense', 'node', 'relu', 'activation', 'function', 'relu', 'activation', 'function', 'relu', 'activation', 'function', 'going', 'create', 'another', 'layer', 'going', 'create', 'another', 'layer', 'going', 'create', 'another', 'layer', 'dense', 'node', 'relu', 'activation', 'dense', 'node', 'relu', 'activation', 'dense', 'node', 'relu', 'activation', 'output', 'layer', 'going', 'output', 'layer', 'going', 'output', 'layer', 'going', 'one', 'node', 'okay', 'one', 'node', 'okay', 'one', 'node', 'okay', 'thats', 'easy', 'define', 'thats', 'easy', 'define', 'thats', 'easy', 'define', 'something', 'tensorflow', 'something', 'tensorflow', 'something', 'tensorflow', 'tensorflow', 'open', 'source', 'library', 'tensorflow', 'open', 'source', 'library', 'tensorflow', 'open', 'source', 'library', 'help', 'develop', 'train', 'help', 'develop', 'train', 'help', 'develop', 'train', 'model', 'model', 'model', 'let', 'implement', 'neural', 'net', 'let', 'implement', 'neural', 'net', 'let', 'implement', 'neural', 'net', 'using', 'neural', 'net', 'using', 'neural', 'net', 'using', 'neural', 'net', 'classification', 'classification', 'classification', 'neural', 'net', 'model', 'neural', 'net', 'model', 'neural', 'net', 'model', 'going', 'use', 'tensorflow', 'going', 'use', 'tensorflow', 'going', 'use', 'tensorflow', 'dont', 'think', 'imported', 'dont', 'think', 'imported', 'dont', 'think', 'imported', 'going', 'import', 'going', 'import', 'going', 'import', 'going', 'import', 'going', 'import', 'going', 'import', 'tensorflow', 'tensorflow', 'tensorflow', 'enter', 'enter', 'enter', 'cool', 'cool', 'cool', 'neural', 'net', 'model', 'neural', 'net', 'model', 'going', 'going', 'going', 'going', 'use', 'going', 'use', 'going', 'use', 'essentially', 'saying', 'essentially', 'saying', 'essentially', 'saying', 'layer', 'thing', 'layer', 'thing', 'layer', 'thing', 'pas', 'pas', 'pas', 'yeah', 'yeah', 'yeah', 'layer', 'linear', 'stack', 'layer', 'layer', 'linear', 'stack', 'layer', 'layer', 'linear', 'stack', 'layer', 'layer', 'model', 'layer', 'model', 'layer', 'model', 'mean', 'nope', 'mean', 'nope', 'mean', 'nope', 'mean', 'pas', 'mean', 'pas', 'mean', 'pas', 'sort', 'layer', 'sort', 'layer', 'sort', 'layer', 'going', 'use', 'dense', 'layer', 'going', 'use', 'dense', 'layer', 'going', 'use', 'dense', 'layer', 'oops', 'dot', 'dense', 'oops', 'dot', 'dense', 'oops', 'dot', 'dense', 'let', 'say', 'let', 'say', 'let', 'say', 'unit', 'unit', 'unit', 'okay', 'okay', 'okay', 'also', 'set', 'activation', 'relu', 'set', 'activation', 'relu', 'first', 'specify', 'first', 'specify', 'first', 'specify', 'input', 'shape', 'input', 'shape', 'input', 'shape', 'comma', 'comma', 'comma', 'right', 'right', 'thats', 'first', 'layer', 'right', 'thats', 'first', 'layer', 'next', 'layer', 'going', 'next', 'layer', 'going', 'next', 'layer', 'going', 'another', 'another', 'another', 'dense', 'layer', 'unit', 'using', 'relu', 'dense', 'layer', 'unit', 'using', 'relu', 'dense', 'layer', 'unit', 'using', 'relu', 'thats', 'final', 'layer', 'thats', 'final', 'layer', 'thats', 'final', 'layer', 'going', 'output', 'layer', 'going', 'output', 'layer', 'going', 'output', 'layer', 'going', 'one', 'node', 'going', 'one', 'node', 'going', 'one', 'node', 'activation', 'going', 'activation', 'going', 'activation', 'going', 'sigmoid', 'sigmoid', 'sigmoid', 'recall', 'logistic', 'recall', 'logistic', 'recall', 'logistic', 'regression', 'happened', 'regression', 'happened', 'regression', 'happened', 'sigmoid', 'look', 'something', 'like', 'sigmoid', 'look', 'something', 'like', 'sigmoid', 'look', 'something', 'like', 'right', 'creating', 'sigmoid', 'right', 'creating', 'sigmoid', 'right', 'creating', 'sigmoid', 'activation', 'last', 'layer', 'activation', 'last', 'layer', 'activation', 'last', 'layer', 'essentially', 'projecting', 'prediction', 'essentially', 'projecting', 'prediction', 'essentially', 'projecting', 'prediction', 'zero', 'one', 'zero', 'one', 'zero', 'one', 'like', 'logistic', 'like', 'logistic', 'like', 'logistic', 'regression', 'regression', 'regression', 'thats', 'going', 'help', 'thats', 'going', 'help', 'thats', 'going', 'help', 'know', 'round', 'zero', 'know', 'round', 'zero', 'know', 'round', 'zero', 'one', 'classify', 'way', 'one', 'classify', 'way', 'one', 'classify', 'way', 'neural', 'net', 'model', 'neural', 'net', 'model', 'neural', 'net', 'model', 'going', 'going', 'going', 'compile', 'tensorflow', 'compile', 'tensorflow', 'compile', 'tensorflow', 'compile', 'compile', 'compile', 'really', 'cool', 'really', 'cool', 'really', 'cool', 'literally', 'pas', 'type', 'optimizer', 'literally', 'pas', 'type', 'optimizer', 'literally', 'pas', 'type', 'optimizer', 'want', 'itll', 'want', 'itll', 'want', 'itll', 'optimizers', 'optimizers', 'optimizers', 'actually', 'going', 'use', 'atom', 'actually', 'going', 'use', 'atom', 'actually', 'going', 'use', 'atom', 'youll', 'see', 'know', 'youll', 'see', 'know', 'youll', 'see', 'know', 'learning', 'rate', 'learning', 'rate', 'learning', 'rate', 'going', 'use', 'going', 'use', 'going', 'use', 'default', 'default', 'default', 'loss', 'going', 'binary', 'cross', 'binary', 'cross', 'entropy', 'entropy', 'entropy', 'metric', 'also', 'going', 'metric', 'also', 'going', 'metric', 'also', 'going', 'include', 'already', 'include', 'already', 'include', 'already', 'consider', 'loss', 'also', 'going', 'consider', 'loss', 'also', 'going', 'consider', 'loss', 'also', 'going', 'tack', 'accuracy', 'actually', 'see', 'tack', 'accuracy', 'actually', 'see', 'tack', 'accuracy', 'actually', 'see', 'plot', 'later', 'plot', 'later', 'plot', 'later', 'right', 'going', 'run', 'right', 'going', 'run', 'right', 'going', 'run', 'one', 'thing', 'going', 'also', 'one', 'thing', 'going', 'also', 'one', 'thing', 'going', 'also', 'going', 'define', 'plot', 'going', 'define', 'plot', 'going', 'define', 'plot', 'definition', 'actually', 'copying', 'definition', 'actually', 'copying', 'definition', 'actually', 'copying', 'pasting', 'pasting', 'pasting', 'got', 'tensorflow', 'got', 'tensorflow', 'got', 'tensorflow', 'tensorflow', 'tutorial', 'tensorflow', 'tutorial', 'tensorflow', 'tutorial', 'actually', 'like', 'actually', 'like', 'actually', 'like', 'defined', 'defined', 'defined', 'thats', 'exactly', 'thats', 'exactly', 'thats', 'exactly', 'actually', 'going', 'move', 'actually', 'going', 'move', 'actually', 'going', 'move', 'cell', 'cell', 'cell', 'run', 'basically', 'plotting', 'run', 'basically', 'plotting', 'run', 'basically', 'plotting', 'loss', 'different', 'epoch', 'loss', 'different', 'epoch', 'loss', 'different', 'epoch', 'epoch', 'mean', 'like', 'training', 'cycle', 'epoch', 'mean', 'like', 'training', 'cycle', 'epoch', 'mean', 'like', 'training', 'cycle', 'going', 'plot', 'accuracy', 'going', 'plot', 'accuracy', 'going', 'plot', 'accuracy', 'epoch', 'epoch', 'epoch', 'right', 'model', 'right', 'model', 'right', 'model', 'thats', 'left', 'let', 'train', 'okay', 'thats', 'left', 'let', 'train', 'okay', 'thats', 'left', 'let', 'train', 'okay', 'going', 'say', 'history', 'going', 'say', 'history', 'going', 'say', 'history', 'tensorflow', 'great', 'keep', 'tensorflow', 'great', 'keep', 'tensorflow', 'great', 'keep', 'track', 'history', 'training', 'track', 'history', 'training', 'track', 'history', 'training', 'plot', 'later', 'plot', 'later', 'plot', 'later', 'going', 'set', 'equal', 'going', 'set', 'equal', 'going', 'set', 'equal', 'neural', 'net', 'model', 'neural', 'net', 'model', 'neural', 'net', 'model', 'fit', 'fit', 'fit', 'train', 'train', 'train', 'train', 'train', 'train', 'going', 'going', 'going', 'make', 'number', 'epoch', 'equal', 'let', 'make', 'number', 'epoch', 'equal', 'let', 'make', 'number', 'epoch', 'equal', 'let', 'say', 'let', 'use', 'say', 'let', 'use', 'say', 'let', 'use', 'batch', 'size', 'going', 'set', 'batch', 'size', 'going', 'set', 'batch', 'size', 'going', 'set', 'equal', 'let', 'say']"
+equal to let's say 32.,"['equal', 'let', 'say']"
+"equal to let's say 32.
+all right um all right um all right um
+and the validation split so what the validation split does if so what the validation split does if
+it's down here somewhere it's down here somewhere it's down here somewhere
+okay so yeah this validation split is okay so yeah this validation split is okay so yeah this validation split is
+just the fraction the training data to just the fraction the training data to just the fraction the training data to
+be used as validation data be used as validation data be used as validation data
+so essentially every single epoch what's so essentially every single epoch what's so essentially every single epoch what's
+going on is going on is going on is
+uh tensorflow saying leave certain if if uh tensorflow saying leave certain if if uh tensorflow saying leave certain if if
+this is 0.2 then leave 20 this is 0.2 then leave 20 this is 0.2 then leave 20
+out and we're going to test how the out and we're going to test how the out and we're going to test how the
+model performs on that 20 that we've model performs on that 20 that we've model performs on that 20 that we've
+left out left out left out
+okay so it's basically like our okay so it's basically like our okay so it's basically like our
+validation data set but validation data set but validation data set but
+um tensorflow does it on our training um tensorflow does it on our training um tensorflow does it on our training
+data set during the training so we have data set during the training so we have data set during the training so we have
+now a measure outside of just our now a measure outside of just our now a measure outside of just our
+validation data set to see you know validation data set to see you know validation data set to see you know
+what's going on what's going on what's going on
+so validation split i'm going to make so validation split i'm going to make so validation split i'm going to make
+that 0.2 that 0.2 that 0.2
+and we can run this so if i run that set verbose set verbose
+equal to zero which means okay don't equal to zero which means okay don't equal to zero which means okay don't
+print anything because printing print anything because printing print anything because printing
+something for 100 epochs might get kind something for 100 epochs might get kind something for 100 epochs might get kind
+of annoying of annoying of annoying
+so i'm just gonna let it run so i'm just gonna let it run so i'm just gonna let it run
+let it train and then we'll see what let it train and then we'll see what let it train and then we'll see what
+happens cool so it finished training and now cool so it finished training and now
+what i can do is because you know i've what i can do is because you know i've what i can do is because you know i've
+already defined these two functions already defined these two functions already defined these two functions
+i can go ahead and i can plot the loss i can go ahead and i can plot the loss i can go ahead and i can plot the loss
+oops oops oops
+plot loss of that history plot loss of that history plot loss of that history
+and i can also plot the accuracy and i can also plot the accuracy and i can also plot the accuracy
+throughout throughout throughout
+the training the training the training
+so so so
+this is a little bit ish what we're this is a little bit ish what we're this is a little bit ish what we're
+looking for we definitely are looking looking for we definitely are looking looking for we definitely are looking
+for a steadily decreasing loss for a steadily decreasing loss for a steadily decreasing loss
+and an increasing accuracy so here we do and an increasing accuracy so here we do and an increasing accuracy so here we do
+see that you know our validation see that you know our validation see that you know our validation
+accuracy improves from accuracy improves from accuracy improves from
+uh around point seven uh around point seven uh around point seven
+seven or something all the way up to seven or something all the way up to seven or something all the way up to
+somewhere around point maybe eight one somewhere around point maybe eight one somewhere around point maybe eight one
+and our loss is decreasing so this is and our loss is decreasing so this is and our loss is decreasing so this is
+good good good
+it is expected that the validation loss it is expected that the validation loss it is expected that the validation loss
+and accuracy is performing worse than um and accuracy is performing worse than um and accuracy is performing worse than um
+the training loss or accuracy and that's the training loss or accuracy and that's the training loss or accuracy and that's
+because our model is training on that because our model is training on that because our model is training on that
+data so it's adapting to that data data so it's adapting to that data data so it's adapting to that data
+whereas the validation stuff is you know whereas the validation stuff is you know whereas the validation stuff is you know
+stuff that it hasn't seen yet so stuff that it hasn't seen yet so stuff that it hasn't seen yet so
+so that's why so that's why so that's why
+so in machine learning as we saw above so in machine learning as we saw above so in machine learning as we saw above
+we could change a bunch of the we could change a bunch of the we could change a bunch of the
+parameters right like i could change parameters right like i could change parameters right like i could change
+this to 64.","['equal', 'let', 'say', 'right', 'right', 'right', 'validation', 'split', 'validation', 'split', 'validation', 'split', 'somewhere', 'somewhere', 'somewhere', 'okay', 'yeah', 'validation', 'split', 'okay', 'yeah', 'validation', 'split', 'okay', 'yeah', 'validation', 'split', 'fraction', 'training', 'data', 'fraction', 'training', 'data', 'fraction', 'training', 'data', 'used', 'validation', 'data', 'used', 'validation', 'data', 'used', 'validation', 'data', 'essentially', 'every', 'single', 'epoch', 'whats', 'essentially', 'every', 'single', 'epoch', 'whats', 'essentially', 'every', 'single', 'epoch', 'whats', 'going', 'going', 'going', 'tensorflow', 'saying', 'leave', 'certain', 'tensorflow', 'saying', 'leave', 'certain', 'tensorflow', 'saying', 'leave', 'certain', 'leave', 'leave', 'leave', 'going', 'test', 'going', 'test', 'going', 'test', 'model', 'performs', 'weve', 'model', 'performs', 'weve', 'model', 'performs', 'weve', 'left', 'left', 'left', 'okay', 'basically', 'like', 'okay', 'basically', 'like', 'okay', 'basically', 'like', 'validation', 'data', 'set', 'validation', 'data', 'set', 'validation', 'data', 'set', 'tensorflow', 'training', 'tensorflow', 'training', 'tensorflow', 'training', 'data', 'set', 'training', 'data', 'set', 'training', 'data', 'set', 'training', 'measure', 'outside', 'measure', 'outside', 'measure', 'outside', 'validation', 'data', 'set', 'see', 'know', 'validation', 'data', 'set', 'see', 'know', 'validation', 'data', 'set', 'see', 'know', 'whats', 'going', 'whats', 'going', 'whats', 'going', 'validation', 'split', 'going', 'make', 'validation', 'split', 'going', 'make', 'validation', 'split', 'going', 'make', 'run', 'run', 'set', 'verbose', 'set', 'verbose', 'equal', 'zero', 'mean', 'okay', 'dont', 'equal', 'zero', 'mean', 'okay', 'dont', 'equal', 'zero', 'mean', 'okay', 'dont', 'print', 'anything', 'printing', 'print', 'anything', 'printing', 'print', 'anything', 'printing', 'something', 'epoch', 'might', 'get', 'kind', 'something', 'epoch', 'might', 'get', 'kind', 'something', 'epoch', 'might', 'get', 'kind', 'annoying', 'annoying', 'annoying', 'gon', 'let', 'run', 'gon', 'let', 'run', 'gon', 'let', 'run', 'let', 'train', 'well', 'see', 'let', 'train', 'well', 'see', 'let', 'train', 'well', 'see', 'happens', 'cool', 'finished', 'training', 'cool', 'finished', 'training', 'know', 'ive', 'know', 'ive', 'know', 'ive', 'already', 'defined', 'two', 'function', 'already', 'defined', 'two', 'function', 'already', 'defined', 'two', 'function', 'ahead', 'plot', 'loss', 'ahead', 'plot', 'loss', 'ahead', 'plot', 'loss', 'oops', 'oops', 'oops', 'plot', 'loss', 'history', 'plot', 'loss', 'history', 'plot', 'loss', 'history', 'also', 'plot', 'accuracy', 'also', 'plot', 'accuracy', 'also', 'plot', 'accuracy', 'throughout', 'throughout', 'throughout', 'training', 'training', 'training', 'little', 'bit', 'ish', 'little', 'bit', 'ish', 'little', 'bit', 'ish', 'looking', 'definitely', 'looking', 'looking', 'definitely', 'looking', 'looking', 'definitely', 'looking', 'steadily', 'decreasing', 'loss', 'steadily', 'decreasing', 'loss', 'steadily', 'decreasing', 'loss', 'increasing', 'accuracy', 'increasing', 'accuracy', 'increasing', 'accuracy', 'see', 'know', 'validation', 'see', 'know', 'validation', 'see', 'know', 'validation', 'accuracy', 'improves', 'accuracy', 'improves', 'accuracy', 'improves', 'around', 'point', 'seven', 'around', 'point', 'seven', 'around', 'point', 'seven', 'seven', 'something', 'way', 'seven', 'something', 'way', 'seven', 'something', 'way', 'somewhere', 'around', 'point', 'maybe', 'eight', 'one', 'somewhere', 'around', 'point', 'maybe', 'eight', 'one', 'somewhere', 'around', 'point', 'maybe', 'eight', 'one', 'loss', 'decreasing', 'loss', 'decreasing', 'loss', 'decreasing', 'good', 'good', 'good', 'expected', 'validation', 'loss', 'expected', 'validation', 'loss', 'expected', 'validation', 'loss', 'accuracy', 'performing', 'worse', 'accuracy', 'performing', 'worse', 'accuracy', 'performing', 'worse', 'training', 'loss', 'accuracy', 'thats', 'training', 'loss', 'accuracy', 'thats', 'training', 'loss', 'accuracy', 'thats', 'model', 'training', 'model', 'training', 'model', 'training', 'data', 'adapting', 'data', 'data', 'adapting', 'data', 'data', 'adapting', 'data', 'whereas', 'validation', 'stuff', 'know', 'whereas', 'validation', 'stuff', 'know', 'whereas', 'validation', 'stuff', 'know', 'stuff', 'hasnt', 'seen', 'yet', 'stuff', 'hasnt', 'seen', 'yet', 'stuff', 'hasnt', 'seen', 'yet', 'thats', 'thats', 'thats', 'machine', 'learning', 'saw', 'machine', 'learning', 'saw', 'machine', 'learning', 'saw', 'could', 'change', 'bunch', 'could', 'change', 'bunch', 'could', 'change', 'bunch', 'parameter', 'right', 'like', 'could', 'change', 'parameter', 'right', 'like', 'could', 'change', 'parameter', 'right', 'like', 'could', 'change']"
+so now it'd be a row of 64 this to 64.,"['itd', 'row']"
+so now it'd be a row of 64 this to 64.,"['itd', 'row']"
+"so now it'd be a row of 64
+nodes and then 32 and then one nodes and then 32 and then one nodes and then 32 and then one
+so i can change some of these parameters so i can change some of these parameters so i can change some of these parameters
+and and and
+a lot of machine learning is trying to a lot of machine learning is trying to a lot of machine learning is trying to
+find hey what do we set these hyper find hey what do we set these hyper find hey what do we set these hyper
+parameters to parameters to parameters to
+so what i'm actually going to do is i'm so what i'm actually going to do is i'm so what i'm actually going to do is i'm
+going to rewrite this so that going to rewrite this so that going to rewrite this so that
+we can do something what's known as a we can do something what's known as a we can do something what's known as a
+grid search so we can search through an grid search so we can search through an grid search so we can search through an
+entire space of hey what happens if entire space of hey what happens if entire space of hey what happens if
+you know we you know we you know we
+have 64 nodes and 64 nodes or 16 nodes have 64 nodes and 64 nodes or 16 nodes have 64 nodes and 64 nodes or 16 nodes
+and 16 nodes and 16 nodes and 16 nodes
+and so on and so on and so on
+um and then on top of all that we can um and then on top of all that we can um and then on top of all that we can
+you know we can change you know we can change you know we can change
+this uh this uh this uh
+learning rate we can change how many learning rate we can change how many learning rate we can change how many
+epochs we can change epochs we can change epochs we can change
+you know the batch size all these things you know the batch size all these things you know the batch size all these things
+might affect our training might affect our training might affect our training
+and and and
+just for kicks i'm also going to add just for kicks i'm also going to add just for kicks i'm also going to add
+what's known as a dropout layer in here and what dropout is doing is saying hey and what dropout is doing is saying hey
+randomly choose randomly choose randomly choose
+with at this rate certain nodes with at this rate certain nodes with at this rate certain nodes
+and don't train them and don't train them and don't train them
+in you know a certain iteration so this in you know a certain iteration so this in you know a certain iteration so this
+helps prevent overfitting helps prevent overfitting helps prevent overfitting
+okay okay okay
+so so so
+i'm actually going to i'm actually going to i'm actually going to
+define this define this define this
+as a function called train model we're as a function called train model we're as a function called train model we're
+going to pass an x train y train going to pass an x train y train going to pass an x train y train
+um the number of um the number of um the number of
+nodes nodes nodes
+uh the drop out uh the drop out uh the drop out
+you know the probability that we just you know the probability that we just you know the probability that we just
+talked about talked about talked about
+um um um
+learning rate learning rate learning rate
+so i'm actually going to say lr so i'm actually going to say lr so i'm actually going to say lr
+batch size batch size batch size
+and and and
+we can also pass the number of epochs we can also pass the number of epochs we can also pass the number of epochs
+right i mentioned that as a parameter right i mentioned that as a parameter right i mentioned that as a parameter
+so indent this so it goes under here and so indent this so it goes under here and so indent this so it goes under here and
+with these two i'm going to set this with these two i'm going to set this with these two i'm going to set this
+equal to number of nodes equal to number of nodes equal to number of nodes
+and now with the two dropout layers i'm and now with the two dropout layers i'm and now with the two dropout layers i'm
+going to set dropout prob so now you going to set dropout prob so now you going to set dropout prob so now you
+know the probability of know the probability of know the probability of
+turning off a node during the training turning off a node during the training turning off a node during the training
+is equal to dropout prop is equal to dropout prop is equal to dropout prop
+um and i'm going to keep the output um and i'm going to keep the output um and i'm going to keep the output
+layer the same layer the same layer the same
+now i'm compiling it but this here is now i'm compiling it but this here is now i'm compiling it but this here is
+now going to be my learning rate now going to be my learning rate now going to be my learning rate
+and i still want binary cross entropy and i still want binary cross entropy and i still want binary cross entropy
+and accuracy and accuracy and accuracy
+we are actually going to train we are actually going to train we are actually going to train
+our model inside of our model inside of our model inside of
+this this this
+function function function
+but here we can do the epochs equals but here we can do the epochs equals but here we can do the epochs equals
+epochs and this is equal to whatever you epochs and this is equal to whatever you epochs and this is equal to whatever you
+know we're passing in know we're passing in know we're passing in
+uh x train y train belong right here uh x train y train belong right here uh x train y train belong right here
+okay so those are getting passed in as okay so those are getting passed in as okay so those are getting passed in as
+well well well
+and finally at the end i'm going to and finally at the end i'm going to and finally at the end i'm going to
+return this model and the history of return this model and the history of return this model and the history of
+that model okay okay
+so is let's just go through all of these so is let's just go through all of these so
+let's say let's keep the epochs at 100.","['itd', 'row', 'node', 'one', 'node', 'one', 'node', 'one', 'change', 'parameter', 'change', 'parameter', 'change', 'parameter', 'lot', 'machine', 'learning', 'trying', 'lot', 'machine', 'learning', 'trying', 'lot', 'machine', 'learning', 'trying', 'find', 'hey', 'set', 'hyper', 'find', 'hey', 'set', 'hyper', 'find', 'hey', 'set', 'hyper', 'parameter', 'parameter', 'parameter', 'actually', 'going', 'actually', 'going', 'actually', 'going', 'going', 'rewrite', 'going', 'rewrite', 'going', 'rewrite', 'something', 'whats', 'known', 'something', 'whats', 'known', 'something', 'whats', 'known', 'grid', 'search', 'search', 'grid', 'search', 'search', 'grid', 'search', 'search', 'entire', 'space', 'hey', 'happens', 'entire', 'space', 'hey', 'happens', 'entire', 'space', 'hey', 'happens', 'know', 'know', 'know', 'node', 'node', 'node', 'node', 'node', 'node', 'node', 'node', 'node', 'node', 'node', 'node', 'top', 'top', 'top', 'know', 'change', 'know', 'change', 'know', 'change', 'learning', 'rate', 'change', 'many', 'learning', 'rate', 'change', 'many', 'learning', 'rate', 'change', 'many', 'epoch', 'change', 'epoch', 'change', 'epoch', 'change', 'know', 'batch', 'size', 'thing', 'know', 'batch', 'size', 'thing', 'know', 'batch', 'size', 'thing', 'might', 'affect', 'training', 'might', 'affect', 'training', 'might', 'affect', 'training', 'kick', 'also', 'going', 'add', 'kick', 'also', 'going', 'add', 'kick', 'also', 'going', 'add', 'whats', 'known', 'dropout', 'layer', 'dropout', 'saying', 'hey', 'dropout', 'saying', 'hey', 'randomly', 'choose', 'randomly', 'choose', 'randomly', 'choose', 'rate', 'certain', 'node', 'rate', 'certain', 'node', 'rate', 'certain', 'node', 'dont', 'train', 'dont', 'train', 'dont', 'train', 'know', 'certain', 'iteration', 'know', 'certain', 'iteration', 'know', 'certain', 'iteration', 'help', 'prevent', 'overfitting', 'help', 'prevent', 'overfitting', 'help', 'prevent', 'overfitting', 'okay', 'okay', 'okay', 'actually', 'going', 'actually', 'going', 'actually', 'going', 'define', 'define', 'define', 'function', 'called', 'train', 'model', 'function', 'called', 'train', 'model', 'function', 'called', 'train', 'model', 'going', 'pas', 'train', 'train', 'going', 'pas', 'train', 'train', 'going', 'pas', 'train', 'train', 'number', 'number', 'number', 'node', 'node', 'node', 'drop', 'drop', 'drop', 'know', 'probability', 'know', 'probability', 'know', 'probability', 'talked', 'talked', 'talked', 'learning', 'rate', 'learning', 'rate', 'learning', 'rate', 'actually', 'going', 'say', 'actually', 'going', 'say', 'actually', 'going', 'say', 'batch', 'size', 'batch', 'size', 'batch', 'size', 'also', 'pas', 'number', 'epoch', 'also', 'pas', 'number', 'epoch', 'also', 'pas', 'number', 'epoch', 'right', 'mentioned', 'parameter', 'right', 'mentioned', 'parameter', 'right', 'mentioned', 'parameter', 'indent', 'go', 'indent', 'go', 'indent', 'go', 'two', 'going', 'set', 'two', 'going', 'set', 'two', 'going', 'set', 'equal', 'number', 'node', 'equal', 'number', 'node', 'equal', 'number', 'node', 'two', 'dropout', 'layer', 'two', 'dropout', 'layer', 'two', 'dropout', 'layer', 'going', 'set', 'dropout', 'prob', 'going', 'set', 'dropout', 'prob', 'going', 'set', 'dropout', 'prob', 'know', 'probability', 'know', 'probability', 'know', 'probability', 'turning', 'node', 'training', 'turning', 'node', 'training', 'turning', 'node', 'training', 'equal', 'dropout', 'prop', 'equal', 'dropout', 'prop', 'equal', 'dropout', 'prop', 'going', 'keep', 'output', 'going', 'keep', 'output', 'going', 'keep', 'output', 'layer', 'layer', 'layer', 'compiling', 'compiling', 'compiling', 'going', 'learning', 'rate', 'going', 'learning', 'rate', 'going', 'learning', 'rate', 'still', 'want', 'binary', 'cross', 'entropy', 'still', 'want', 'binary', 'cross', 'entropy', 'still', 'want', 'binary', 'cross', 'entropy', 'accuracy', 'accuracy', 'accuracy', 'actually', 'going', 'train', 'actually', 'going', 'train', 'actually', 'going', 'train', 'model', 'inside', 'model', 'inside', 'model', 'inside', 'function', 'function', 'function', 'epoch', 'equal', 'epoch', 'equal', 'epoch', 'equal', 'epoch', 'equal', 'whatever', 'epoch', 'equal', 'whatever', 'epoch', 'equal', 'whatever', 'know', 'passing', 'know', 'passing', 'know', 'passing', 'train', 'train', 'belong', 'right', 'train', 'train', 'belong', 'right', 'train', 'train', 'belong', 'right', 'okay', 'getting', 'passed', 'okay', 'getting', 'passed', 'okay', 'getting', 'passed', 'well', 'well', 'well', 'finally', 'end', 'going', 'finally', 'end', 'going', 'finally', 'end', 'going', 'return', 'model', 'history', 'return', 'model', 'history', 'return', 'model', 'history', 'model', 'okay', 'okay', 'let', 'let', 'let', 'say', 'let', 'keep', 'epoch']"
+let's say let's keep the epochs at 100.,"['let', 'say', 'let', 'keep', 'epoch']"
+"let's say let's keep the epochs at 100.
+and now what i can do is i can say hey and now what i can do is i can say hey and now what i can do is i can say hey
+for a number of nodes in for a number of nodes in for a number of nodes in
+let's say let's do 16 32 and 64 to see let's say let's do 16 32 and 64 to see let's say let's do 16 32 and 64 to see
+what happens what happens what happens
+for the different dropout for the different dropout for the different dropout
+probabilities in probabilities in probabilities in
+i mean zero would be nothing let's use i mean zero would be nothing let's use i mean zero would be nothing let's use
+0.2 also to see what happens 0.2 also to see what happens 0.2 also to see what happens
+um you know for the learning rate in you know for the learning rate in
+uh uh uh
+0.005 0.005 0.005
+0.001 0.001 0.001
+and you know maybe we want to throw on and you know maybe we want to throw on and you know maybe we want to throw on
+0.1 in there as well and then for the batch size uh let's do and then for the batch size uh let's do
+16 32 64 as well actually and let's also 16 32 64 as well actually and let's also 16 32 64 as well actually and let's also
+throw in 128.","['let', 'say', 'let', 'keep', 'epoch', 'say', 'hey', 'say', 'hey', 'say', 'hey', 'number', 'node', 'number', 'node', 'number', 'node', 'let', 'say', 'let', 'see', 'let', 'say', 'let', 'see', 'let', 'say', 'let', 'see', 'happens', 'happens', 'happens', 'different', 'dropout', 'different', 'dropout', 'different', 'dropout', 'probability', 'probability', 'probability', 'mean', 'zero', 'would', 'nothing', 'let', 'use', 'mean', 'zero', 'would', 'nothing', 'let', 'use', 'mean', 'zero', 'would', 'nothing', 'let', 'use', 'also', 'see', 'happens', 'also', 'see', 'happens', 'also', 'see', 'happens', 'know', 'learning', 'rate', 'know', 'learning', 'rate', 'know', 'maybe', 'want', 'throw', 'know', 'maybe', 'want', 'throw', 'know', 'maybe', 'want', 'throw', 'well', 'batch', 'size', 'let', 'batch', 'size', 'let', 'well', 'actually', 'let', 'also', 'well', 'actually', 'let', 'also', 'well', 'actually', 'let', 'also', 'throw']"
+actually let's get rid of throw in 128.,"['actually', 'let', 'get', 'rid', 'throw']"
+actually let's get rid of throw in 128.,"['actually', 'let', 'get', 'rid', 'throw']"
+"actually let's get rid of
+16.","['actually', 'let', 'get', 'rid']"
+sorry 16.,['sorry']
+sorry 16.,['sorry']
+"sorry
+let's throw 128 in there that should be zero one that should be zero one
+i'm going to i'm going to i'm going to
+record the model in history using this record the model in history using this record the model in history using this
+train model here train model here train model here
+so so so
+we're going to do x train y we're going to do x train y we're going to do x train y
+train train train
+the number of nodes is going to be you the number of nodes is going to be you the number of nodes is going to be you
+know the number of nodes that we've know the number of nodes that we've know the number of nodes that we've
+defined here defined here defined here
+dropout dropout dropout
+prob lr prob lr prob lr
+batch size batch size batch size
+and epochs okay and epochs okay and epochs okay
+and then now we have both the model and and then now we have both the model and and then now we have both the model and
+the history and what i'm going to do is the history and what i'm going to do is the history and what i'm going to do is
+again i want to plot again i want to plot again i want to plot
+the loss the loss the loss
+for the history i'm also going to plot for the history i'm also going to plot for the history i'm also going to plot
+the accuracy the accuracy the accuracy
+probably should have done them side by probably should have done them side by probably should have done them side by
+side that probably would have been side that probably would have been side that probably would have been
+easier okay so okay so
+what i'm going to do is what i'm going to do is what i'm going to do is
+split up split this up split up split this up split up split this up
+and that will be and that will be and that will be
+subplots so now this is just saying okay subplots so now this is just saying okay subplots so now this is just saying okay
+i want one row and two columns in that i want one row and two columns in that i want one row and two columns in that
+row for my plots row for my plots row for my plots
+okay okay okay
+so so so
+i'm going to plot on my axis one i'm going to plot on my axis one i'm going to plot on my axis one
+the loss i don't actually know this is gonna work i don't actually know this is gonna work
+okay we don't care about the grid uh okay we don't care about the grid uh okay we don't care about the grid uh
+yeah let's let's keep the grid yeah let's let's keep the grid yeah let's let's keep the grid
+and then now on my other so now on here i'm going to plot all the so now on here i'm going to plot all the
+accuracies on the second plot but we should be able to get rid of that but we should be able to get rid of that
+if we run this we already have history if we run this we already have history if we run this we already have history
+saved as a variable in here so if i just saved as a variable in here so if i just saved as a variable in here so if i just
+run it on this okay it has no run it on this okay it has no run it on this okay it has no
+attribute x label attribute x label attribute x label
+oh i think it's because it's like set x oh i think it's because it's like set x oh i think it's because it's like set x
+label or something okay yeah so it's it's set instead of okay yeah so it's it's set instead of
+just x label y label just x label y label just x label y label
+so let's see if that works so let's see if that works so let's see if that works
+all right cool all right cool all right cool
+um and let's actually make this a bit um and let's actually make this a bit um and let's actually make this a bit
+larger larger larger
+okay so we can actually change the okay so we can actually change the okay so we can actually change the
+figure size and i'm gonna set figure size and i'm gonna set figure size and i'm gonna set
+let's see what happens if i set that to let's see what happens if i set that to let's see what happens if i set that to
+oh that's not the way i wanted it um and that's just going to be my plot and that's just going to be my plot
+history function so now i can plot them history function so now i can plot them history function so now i can plot them
+side by side side by side side by side
+here i'm going to plot the history here i'm going to plot the history here i'm going to plot the history
+and what i'm actually going to do is i and what i'm actually going to do is i and what i'm actually going to do is i
+so here first i'm going to print out all so here first i'm going to print out all so here first i'm going to print out all
+these parameters so i'm going to print these parameters so i'm going to print these parameters so i'm going to print
+out out out
+use the f string to print out uh all of use the f string to print out uh all of use the f string to print out uh all of
+this stuff this stuff this stuff
+so here i'm printing out how many nodes so here i'm printing out how many nodes so here i'm printing out how many nodes
+um um um
+the dropout probability and we already know how many emails so and we already know how many emails so
+i'm not even gonna bother with that so so
+once we plot once we plot once we plot
+this this this
+uh let's actually also uh let's actually also uh let's actually also
+figure out what the um figure out what the um figure out what the um
+what the validation loss is on our what the validation loss is on our what the validation loss is on our
+validation set that we have validation set that we have validation set that we have
+that we created all the way back up here that we created all the way back up here that we created all the way back up here
+all right so remember we created three all right so remember we created three all right so remember we created three
+data sets data sets data sets
+let's call our model and evaluate let's call our model and evaluate let's call our model and evaluate
+what the what the what the
+validation validation validation
+data what the validation data sets loss data what the validation data sets loss data what the validation data sets loss
+would be would be would be
+and i actually want to record and i actually want to record and i actually want to record
+let's say i want to record let's say i want to record let's say i want to record
+whatever model has the least validation whatever model has the least validation whatever model has the least validation
+loss so first i'm going to initialize that to first i'm going to initialize that to
+infinity so that you know any model will infinity so that you know any model will infinity so that you know any model will
+beat that score beat that score beat that score
+so if i do float infinity that will set so if i do float infinity that will set so if i do float infinity that will set
+that to infinity that to infinity that to infinity
+and um maybe i'll keep track of the and um maybe i'll keep track of the and um maybe i'll keep track of the
+parameters actually it doesn't really parameters actually it doesn't really parameters actually it doesn't really
+matter matter matter
+i'm just going to keep track of the i'm just going to keep track of the i'm just going to keep track of the
+model model model
+and i'm going to set that to none and i'm going to set that to none and i'm going to set that to none
+so now down here so now down here so now down here
+if the validation loss is ever less than if the validation loss is ever less than if the validation loss is ever less than
+the least validation loss the least validation loss the least validation loss
+then i am going to simply come down here then i am going to simply come down here then i am going to simply come down here
+and say hey and say hey and say hey
+this validation this validation this validation
+or this lease validation loss is now or this lease validation loss is now or this lease validation loss is now
+equal to the validation loss equal to the validation loss equal to the validation loss
+and and and
+the least the least the least
+loss model loss model loss model
+is whatever this model is whatever this model is whatever this model
+is that just earned that validation loss is that just earned that validation loss is that just earned that validation loss
+okay okay okay
+so so so
+we are actually just going to let this we are actually just going to let this we are actually just going to let this
+run run run
+um for a while and then we're going to um for a while and then we're going to um for a while and then we're going to
+get our least get our least get our least
+loss model after that loss model after that loss model after that
+so all right so we have finally finished all right so we have finally finished
+training training training
+and you'll notice that okay down here and you'll notice that okay down here and you'll notice that okay down here
+the loss actually gets to like 0.29 the loss actually gets to like 0.29 the loss actually gets to like 0.29
+the accuracy is around 88 which is the accuracy is around 88 which is the accuracy is around 88 which is
+pretty good pretty good pretty good
+so you might be wondering okay why is so you might be wondering okay why is so you might be wondering okay why is
+this accuracy in this this accuracy in this this accuracy in this
+like these are both the validation like these are both the validation like these are both the validation
+so this accuracy here is on the so this accuracy here is on the so this accuracy here is on the
+validation data set that we've defined validation data set that we've defined validation data set that we've defined
+at the beginning right and this one here at the beginning right and this one here at the beginning right and this one here
+this is actually taking 20 of our test this is actually taking 20 of our test this is actually taking 20 of our test
+our training set every time during the our training set every time during the our training set every time during the
+training and saying okay how much of it training and saying okay how much of it training and saying okay how much of it
+do i get right now do i get right now do i get right now
+you know after this one step where i you know after this one step where i you know after this one step where i
+didn't train with any of that didn't train with any of that didn't train with any of that
+so they're slightly different and so they're slightly different and so they're slightly different and
+actually i realized later on that i actually i realized later on that i actually i realized later on that i
+probably you know probably what i should probably you know probably what i should probably you know probably what i should
+have done have done have done
+is over here when we were defining is over here when we were defining is over here when we were defining
+the model fit instead of the validation the model fit instead of the validation the model fit instead of the validation
+split you can define the validation data split you can define the validation data split you can define the validation data
+and you can pass in the validation data and you can pass in the validation data and you can pass in the validation data
+i don't know if this is the proper i don't know if this is the proper i don't know if this is the proper
+syntax but syntax but syntax but
+that's probably what i should have done that's probably what i should have done that's probably what i should have done
+but instead you know we'll just stick but instead you know we'll just stick but instead you know we'll just stick
+with what we have here with what we have here with what we have here
+so you'll see at the end you know with so you'll see at the end you know with so you'll see at the end you know with
+the 64 nodes it seems like this is our the 64 nodes it seems like this is our the 64 nodes it seems like this is our
+best performance 64 nodes with a dropout best performance 64 nodes with a dropout best performance 64 nodes with a dropout
+of 0.2 a learning rate of of 0.2 a learning rate of of 0.2 a learning rate of
+0.001 and a batch size of 64.","['sorry', 'let', 'throw', 'zero', 'one', 'zero', 'one', 'going', 'going', 'going', 'record', 'model', 'history', 'using', 'record', 'model', 'history', 'using', 'record', 'model', 'history', 'using', 'train', 'model', 'train', 'model', 'train', 'model', 'going', 'train', 'going', 'train', 'going', 'train', 'train', 'train', 'train', 'number', 'node', 'going', 'number', 'node', 'going', 'number', 'node', 'going', 'know', 'number', 'node', 'weve', 'know', 'number', 'node', 'weve', 'know', 'number', 'node', 'weve', 'defined', 'defined', 'defined', 'dropout', 'dropout', 'dropout', 'prob', 'prob', 'prob', 'batch', 'size', 'batch', 'size', 'batch', 'size', 'epoch', 'okay', 'epoch', 'okay', 'epoch', 'okay', 'model', 'model', 'model', 'history', 'going', 'history', 'going', 'history', 'going', 'want', 'plot', 'want', 'plot', 'want', 'plot', 'loss', 'loss', 'loss', 'history', 'also', 'going', 'plot', 'history', 'also', 'going', 'plot', 'history', 'also', 'going', 'plot', 'accuracy', 'accuracy', 'accuracy', 'probably', 'done', 'side', 'probably', 'done', 'side', 'probably', 'done', 'side', 'side', 'probably', 'would', 'side', 'probably', 'would', 'side', 'probably', 'would', 'easier', 'okay', 'okay', 'going', 'going', 'going', 'split', 'split', 'split', 'split', 'split', 'split', 'subplots', 'saying', 'okay', 'subplots', 'saying', 'okay', 'subplots', 'saying', 'okay', 'want', 'one', 'row', 'two', 'column', 'want', 'one', 'row', 'two', 'column', 'want', 'one', 'row', 'two', 'column', 'row', 'plot', 'row', 'plot', 'row', 'plot', 'okay', 'okay', 'okay', 'going', 'plot', 'axis', 'one', 'going', 'plot', 'axis', 'one', 'going', 'plot', 'axis', 'one', 'loss', 'dont', 'actually', 'know', 'gon', 'work', 'dont', 'actually', 'know', 'gon', 'work', 'okay', 'dont', 'care', 'grid', 'okay', 'dont', 'care', 'grid', 'okay', 'dont', 'care', 'grid', 'yeah', 'let', 'let', 'keep', 'grid', 'yeah', 'let', 'let', 'keep', 'grid', 'yeah', 'let', 'let', 'keep', 'grid', 'going', 'plot', 'going', 'plot', 'accuracy', 'second', 'plot', 'able', 'get', 'rid', 'able', 'get', 'rid', 'run', 'already', 'history', 'run', 'already', 'history', 'run', 'already', 'history', 'saved', 'variable', 'saved', 'variable', 'saved', 'variable', 'run', 'okay', 'run', 'okay', 'run', 'okay', 'attribute', 'label', 'attribute', 'label', 'attribute', 'label', 'think', 'like', 'set', 'think', 'like', 'set', 'think', 'like', 'set', 'label', 'something', 'okay', 'yeah', 'set', 'instead', 'okay', 'yeah', 'set', 'instead', 'label', 'label', 'label', 'label', 'label', 'label', 'let', 'see', 'work', 'let', 'see', 'work', 'let', 'see', 'work', 'right', 'cool', 'right', 'cool', 'right', 'cool', 'let', 'actually', 'make', 'bit', 'let', 'actually', 'make', 'bit', 'let', 'actually', 'make', 'bit', 'larger', 'larger', 'larger', 'okay', 'actually', 'change', 'okay', 'actually', 'change', 'okay', 'actually', 'change', 'figure', 'size', 'gon', 'set', 'figure', 'size', 'gon', 'set', 'figure', 'size', 'gon', 'set', 'let', 'see', 'happens', 'set', 'let', 'see', 'happens', 'set', 'let', 'see', 'happens', 'set', 'thats', 'way', 'wanted', 'thats', 'going', 'plot', 'thats', 'going', 'plot', 'history', 'function', 'plot', 'history', 'function', 'plot', 'history', 'function', 'plot', 'side', 'side', 'side', 'side', 'side', 'side', 'going', 'plot', 'history', 'going', 'plot', 'history', 'going', 'plot', 'history', 'actually', 'going', 'actually', 'going', 'actually', 'going', 'first', 'going', 'print', 'first', 'going', 'print', 'first', 'going', 'print', 'parameter', 'going', 'print', 'parameter', 'going', 'print', 'parameter', 'going', 'print', 'use', 'string', 'print', 'use', 'string', 'print', 'use', 'string', 'print', 'stuff', 'stuff', 'stuff', 'printing', 'many', 'node', 'printing', 'many', 'node', 'printing', 'many', 'node', 'dropout', 'probability', 'already', 'know', 'many', 'email', 'already', 'know', 'many', 'email', 'even', 'gon', 'bother', 'plot', 'plot', 'plot', 'let', 'actually', 'also', 'let', 'actually', 'also', 'let', 'actually', 'also', 'figure', 'figure', 'figure', 'validation', 'loss', 'validation', 'loss', 'validation', 'loss', 'validation', 'set', 'validation', 'set', 'validation', 'set', 'created', 'way', 'back', 'created', 'way', 'back', 'created', 'way', 'back', 'right', 'remember', 'created', 'three', 'right', 'remember', 'created', 'three', 'right', 'remember', 'created', 'three', 'data', 'set', 'data', 'set', 'data', 'set', 'let', 'call', 'model', 'evaluate', 'let', 'call', 'model', 'evaluate', 'let', 'call', 'model', 'evaluate', 'validation', 'validation', 'validation', 'data', 'validation', 'data', 'set', 'loss', 'data', 'validation', 'data', 'set', 'loss', 'data', 'validation', 'data', 'set', 'loss', 'would', 'would', 'would', 'actually', 'want', 'record', 'actually', 'want', 'record', 'actually', 'want', 'record', 'let', 'say', 'want', 'record', 'let', 'say', 'want', 'record', 'let', 'say', 'want', 'record', 'whatever', 'model', 'least', 'validation', 'whatever', 'model', 'least', 'validation', 'whatever', 'model', 'least', 'validation', 'loss', 'first', 'going', 'initialize', 'first', 'going', 'initialize', 'infinity', 'know', 'model', 'infinity', 'know', 'model', 'infinity', 'know', 'model', 'beat', 'score', 'beat', 'score', 'beat', 'score', 'float', 'infinity', 'set', 'float', 'infinity', 'set', 'float', 'infinity', 'set', 'infinity', 'infinity', 'infinity', 'maybe', 'ill', 'keep', 'track', 'maybe', 'ill', 'keep', 'track', 'maybe', 'ill', 'keep', 'track', 'parameter', 'actually', 'doesnt', 'really', 'parameter', 'actually', 'doesnt', 'really', 'parameter', 'actually', 'doesnt', 'really', 'matter', 'matter', 'matter', 'going', 'keep', 'track', 'going', 'keep', 'track', 'going', 'keep', 'track', 'model', 'model', 'model', 'going', 'set', 'none', 'going', 'set', 'none', 'going', 'set', 'none', 'validation', 'loss', 'ever', 'less', 'validation', 'loss', 'ever', 'less', 'validation', 'loss', 'ever', 'less', 'least', 'validation', 'loss', 'least', 'validation', 'loss', 'least', 'validation', 'loss', 'going', 'simply', 'come', 'going', 'simply', 'come', 'going', 'simply', 'come', 'say', 'hey', 'say', 'hey', 'say', 'hey', 'validation', 'validation', 'validation', 'lease', 'validation', 'loss', 'lease', 'validation', 'loss', 'lease', 'validation', 'loss', 'equal', 'validation', 'loss', 'equal', 'validation', 'loss', 'equal', 'validation', 'loss', 'least', 'least', 'least', 'loss', 'model', 'loss', 'model', 'loss', 'model', 'whatever', 'model', 'whatever', 'model', 'whatever', 'model', 'earned', 'validation', 'loss', 'earned', 'validation', 'loss', 'earned', 'validation', 'loss', 'okay', 'okay', 'okay', 'actually', 'going', 'let', 'actually', 'going', 'let', 'actually', 'going', 'let', 'run', 'run', 'run', 'going', 'going', 'going', 'get', 'least', 'get', 'least', 'get', 'least', 'loss', 'model', 'loss', 'model', 'loss', 'model', 'right', 'finally', 'finished', 'right', 'finally', 'finished', 'training', 'training', 'training', 'youll', 'notice', 'okay', 'youll', 'notice', 'okay', 'youll', 'notice', 'okay', 'loss', 'actually', 'get', 'like', 'loss', 'actually', 'get', 'like', 'loss', 'actually', 'get', 'like', 'accuracy', 'around', 'accuracy', 'around', 'accuracy', 'around', 'pretty', 'good', 'pretty', 'good', 'pretty', 'good', 'might', 'wondering', 'okay', 'might', 'wondering', 'okay', 'might', 'wondering', 'okay', 'accuracy', 'accuracy', 'accuracy', 'like', 'validation', 'like', 'validation', 'like', 'validation', 'accuracy', 'accuracy', 'accuracy', 'validation', 'data', 'set', 'weve', 'defined', 'validation', 'data', 'set', 'weve', 'defined', 'validation', 'data', 'set', 'weve', 'defined', 'beginning', 'right', 'one', 'beginning', 'right', 'one', 'beginning', 'right', 'one', 'actually', 'taking', 'test', 'actually', 'taking', 'test', 'actually', 'taking', 'test', 'training', 'set', 'every', 'time', 'training', 'set', 'every', 'time', 'training', 'set', 'every', 'time', 'training', 'saying', 'okay', 'much', 'training', 'saying', 'okay', 'much', 'training', 'saying', 'okay', 'much', 'get', 'right', 'get', 'right', 'get', 'right', 'know', 'one', 'step', 'know', 'one', 'step', 'know', 'one', 'step', 'didnt', 'train', 'didnt', 'train', 'didnt', 'train', 'theyre', 'slightly', 'different', 'theyre', 'slightly', 'different', 'theyre', 'slightly', 'different', 'actually', 'realized', 'later', 'actually', 'realized', 'later', 'actually', 'realized', 'later', 'probably', 'know', 'probably', 'probably', 'know', 'probably', 'probably', 'know', 'probably', 'done', 'done', 'done', 'defining', 'defining', 'defining', 'model', 'fit', 'instead', 'validation', 'model', 'fit', 'instead', 'validation', 'model', 'fit', 'instead', 'validation', 'split', 'define', 'validation', 'data', 'split', 'define', 'validation', 'data', 'split', 'define', 'validation', 'data', 'pas', 'validation', 'data', 'pas', 'validation', 'data', 'pas', 'validation', 'data', 'dont', 'know', 'proper', 'dont', 'know', 'proper', 'dont', 'know', 'proper', 'syntax', 'syntax', 'syntax', 'thats', 'probably', 'done', 'thats', 'probably', 'done', 'thats', 'probably', 'done', 'instead', 'know', 'well', 'stick', 'instead', 'know', 'well', 'stick', 'instead', 'know', 'well', 'stick', 'youll', 'see', 'end', 'know', 'youll', 'see', 'end', 'know', 'youll', 'see', 'end', 'know', 'node', 'seems', 'like', 'node', 'seems', 'like', 'node', 'seems', 'like', 'best', 'performance', 'node', 'dropout', 'best', 'performance', 'node', 'dropout', 'best', 'performance', 'node', 'dropout', 'learning', 'rate', 'learning', 'rate', 'learning', 'rate', 'batch', 'size']"
+0.001 and a batch size of 64.,"['batch', 'size']"
+"0.001 and a batch size of 64.
+and it does seem like yes the validation and it does seem like yes the validation and it does seem like yes the validation
+you know the fake validation but the you know the fake validation but the you know the fake validation but the
+validation um validation um validation um
+loss is decreasing and then the accuracy loss is decreasing and then the accuracy loss is decreasing and then the accuracy
+is increasing which is a good sign okay is increasing which is a good sign okay is increasing which is a good sign okay
+so finally so finally so finally
+what i'm going to do is i'm actually what i'm going to do is i'm actually what i'm going to do is i'm actually
+just going to predict so i'm going to just going to predict so i'm going to just going to predict so i'm going to
+take take take
+this model which we've called our least this model which we've called our least this model which we've called our least
+loss model loss model loss model
+i'm going to take this model and i'm i'm going to take this model and i'm i'm going to take this model and i'm
+going to predict going to predict going to predict
+x test x test x test
+on that on that on that
+and you'll see that it gives me some and you'll see that it gives me some and you'll see that it gives me some
+values that are really close to zero and values that are really close to zero and values that are really close to zero and
+some that are really close to one and some that are really close to one and some that are really close to one and
+that's because we have a sigmoid output that's because we have a sigmoid output that's because we have a sigmoid output
+so so so
+if i if i if i
+do this do this do this
+what i can do is i can cast them what i can do is i can cast them what i can do is i can cast them
+so i'm going to say anything that's so i'm going to say anything that's so i'm going to say anything that's
+greater than 0.5 greater than 0.5 greater than 0.5
+set that to 1.","['batch', 'size', 'seem', 'like', 'yes', 'validation', 'seem', 'like', 'yes', 'validation', 'seem', 'like', 'yes', 'validation', 'know', 'fake', 'validation', 'know', 'fake', 'validation', 'know', 'fake', 'validation', 'validation', 'validation', 'validation', 'loss', 'decreasing', 'accuracy', 'loss', 'decreasing', 'accuracy', 'loss', 'decreasing', 'accuracy', 'increasing', 'good', 'sign', 'okay', 'increasing', 'good', 'sign', 'okay', 'increasing', 'good', 'sign', 'okay', 'finally', 'finally', 'finally', 'going', 'actually', 'going', 'actually', 'going', 'actually', 'going', 'predict', 'going', 'going', 'predict', 'going', 'going', 'predict', 'going', 'take', 'take', 'take', 'model', 'weve', 'called', 'least', 'model', 'weve', 'called', 'least', 'model', 'weve', 'called', 'least', 'loss', 'model', 'loss', 'model', 'loss', 'model', 'going', 'take', 'model', 'going', 'take', 'model', 'going', 'take', 'model', 'going', 'predict', 'going', 'predict', 'going', 'predict', 'test', 'test', 'test', 'youll', 'see', 'give', 'youll', 'see', 'give', 'youll', 'see', 'give', 'value', 'really', 'close', 'zero', 'value', 'really', 'close', 'zero', 'value', 'really', 'close', 'zero', 'really', 'close', 'one', 'really', 'close', 'one', 'really', 'close', 'one', 'thats', 'sigmoid', 'output', 'thats', 'sigmoid', 'output', 'thats', 'sigmoid', 'output', 'cast', 'cast', 'cast', 'going', 'say', 'anything', 'thats', 'going', 'say', 'anything', 'thats', 'going', 'say', 'anything', 'thats', 'greater', 'greater', 'greater', 'set']"
+so if i set that to 1.,['set']
+so if i set that to 1.,['set']
+,
+this to 8.,[]
